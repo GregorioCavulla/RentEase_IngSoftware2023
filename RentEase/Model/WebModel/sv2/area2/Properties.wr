@@ -1,0 +1,15 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="235" gr:y="360" id="sv2#area2" name="Gestione Prodotti" landmark="true" defaultPage="sv2#area2#miu10">
+  <OperationUnits>
+    <ModuleInstanceUnit gr:x="350" gr:y="390" id="sv2#area2#miu10" action="true" moduleId="mov1#opm1">
+      <OKLink id="sv2#area2#miu10#oln36" name="OKFlow36" to="sv2#area2#page12" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="925" gr:y="55" id="sv2#area2#miu11" action="true" name="Aggiungi Prodotto" moduleId="mov1#opm2">
+      <OKLink id="sv2#area2#miu11#oln40" name="OKFlow40" to="sv2#area2#page14#dau4">
+        <LinkParameter id="sv2#area2#miu11#oln40#par103" name="Output Port Parameter10_KeyCondition16 [oid]" source="mov1#opm2#okcu6#ocp10" target="sv2#area2#page14#dau4#su24#kcond16.ent4#att19"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="635" gr:y="435" id="sv2#area2#miu3" action="true" moduleId="mov1#opm3">
+      <OKLink id="sv2#area2#miu3#oln44" name="OKFlow44" to="sv2#area2#page11" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

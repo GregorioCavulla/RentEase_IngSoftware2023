@@ -1,0 +1,64 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="200" gr:y="0" id="sv2#area2#page11" name="Prodotti">
+  <ContentUnits>
+    <IndexUnit gr:x="0" gr:y="0" id="sv2#area2#page11#inu3" name="ListaProdotti" entity="ent4" displayAttributes="ent4#att20 ent4#att21 ent4#att22 ent4#att24" linkOrder="sv2#area2#page11#inu3#ln15 sv2#area2#page11#inu3#ln34 sv2#area2#page11#inu3#ln36">
+      <Link id="sv2#area2#page11#inu3#ln15" name="visualizza dettagli" to="sv2#area2#page11#dau2" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page11#inu3#ln15#par62" name="oid_KeyCondition2 [oid]" source="data[].ent4#att19" target="sv2#area2#page11#dau2#su4#kcond2.ent4#att19"/>
+      </Link>
+      <Link id="sv2#area2#page11#inu3#ln34" name="Flow34" to="sv2#area2#page12#dau3" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area2#page11#inu3#ln36" name="rimuovi" to="sv2#area2#page3#dau8" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page11#inu3#ln36#par44" name="oid_KeyCondition11 [oid]" source="data[].ent4#att19" target="sv2#area2#page3#dau8#su17#kcond11.ent4#att19"/>
+      </Link>
+    </IndexUnit>
+    <DataUnit gr:x="165" gr:y="15" id="sv2#area2#page11#dau2" name="DettagliProdotto" entity="ent4" displayAttributes="ent4#att20 ent4#att21 ent4#att24">
+      <Selector id="sv2#area2#page11#dau2#su4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area2#page11#dau2#su4#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#area2#page11#inu3">
+          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att21"/>
+          <layout:Attribute attribute="ent4#att22"/>
+          <layout:Attribute attribute="ent4#att24"/>
+          <layout:Link link="sv2#area2#page11#inu3#ln15"/>
+          <layout:Link link="sv2#area2#page11#inu3#ln34"/>
+          <layout:Link link="sv2#area2#page11#inu3#ln36"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell colspan="6">
+        <layout:Unit unitId="sv2#area2#page11#dau2">
+          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att21"/>
+          <layout:Attribute attribute="ent4#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

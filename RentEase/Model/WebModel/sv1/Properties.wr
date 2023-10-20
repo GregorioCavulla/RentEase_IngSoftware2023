@@ -1,0 +1,20 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Customer View" landmarks="sv1#area1" homePage="sv1#area1#page5">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv1#miu4" gr:x="205" gr:y="-175" action="true" moduleId="mov1#opm8">
+      <OKLink id="sv1#miu4#oln4" name="OKFlow1" to="sv1#miu6">
+        <LinkParameter id="sv1#miu4#oln4#par73" name="password_password" source="mov1#opm8#okcu2#ocp3" target="sv1#miu6.mov1#opm12#icu6#icp11"/>
+        <LinkParameter id="sv1#miu4#oln4#par74" name="username_username" source="mov1#opm8#okcu2#ocp4" target="sv1#miu6.mov1#opm12#icu6#icp12"/>
+      </OKLink>
+      <KOLink id="sv1#miu4#kln11" name="KOFlow11" to="sv1#page8#mssu6">
+        <LinkParameter id="sv1#miu4#kln11#par80" name="Error message_Shown Messages" source="mov1#opm8#kocu2#ocp2" target="sv1#page8#mssu6.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv1#miu6" gr:x="405" gr:y="-175" action="true" moduleId="mov1#opm12">
+      <OKLink id="sv1#miu6#oln7" name="OKFlow7" to="sv1#area1#page5" automaticCoupling="true"/>
+      <KOLink id="sv1#miu6#kln2" name="KOFlow1" to="sv1#mpage2#mssu9">
+        <LinkParameter id="sv1#miu6#kln2#par16" name="Error message_Shown Messages" source="mov1#opm12#kocu5#ocp7" target="sv1#mpage2#mssu9.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="970" gr:y="0" id="sv1#miu5" action="true" moduleId="mov1#opm9"/>
+  </OperationUnits>
+</SiteView>

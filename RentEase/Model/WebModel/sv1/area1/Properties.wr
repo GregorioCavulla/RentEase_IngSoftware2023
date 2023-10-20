@@ -1,0 +1,18 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="65" gr:y="85" id="sv1#area1" name="AreaCliente" landmark="true" protected="false">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv1#area1#miu12" gr:x="1480" gr:y="510" action="true" moduleId="mov1#opm10">
+      <KOLink id="sv1#area1#miu12#kln18" name="KOFlow12" to="sv1#area1#page15#mssu3">
+        <LinkParameter id="sv1#area1#miu12#kln18#par126" name="Error message_Shown Messages" source="mov1#opm6#kocu5#ocp7" target="sv1#area1#page15#mssu3.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv1#area1#miu13" gr:x="1115" gr:y="210" action="true" moduleId="mov1#opm7">
+      <KOLink id="sv1#area1#miu13#kln19" name="KOFlow11" to="sv1#area1#page15#mssu3">
+        <LinkParameter id="sv1#area1#miu13#kln19#par127" name="Error message_Shown Messages" source="mov1#opm5#kocu4#ocp6" target="sv1#area1#page15#mssu3.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv1#area1#miu13#oln45" name="OKFlow22" to="sv1#area1#page15" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv1#area1#miu14" gr:x="1105" gr:y="480" action="true" moduleId="mov1#opm11">
+      <OKLink id="sv1#area1#miu14#oln46" name="OKFlow12" to="sv1#area1#page15" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>
