@@ -1,0 +1,41 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Admin View" protected="true" landmarks="sv3#area4" homePage="sv3#area4#page2">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv3#miu7" gr:x="515" gr:y="115" action="true" moduleId="mov1#opm12">
+      <KOLink id="sv3#miu7#kln3" name="KOFlow1" to="sv3#mpage3#mssu2">
+        <LinkParameter id="sv3#miu7#kln3#par11" name="Error message_Shown Messages" source="mov1#opm12#kocu5#ocp7" target="sv3#mpage3#mssu2.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv3#miu8" gr:x="1225" gr:y="290" action="true" moduleId="mov1#opm9"/>
+    <ModuleInstanceUnit gr:x="220" gr:y="555" id="sv3#miu9" action="true" moduleId="mov1#opm8">
+      <OKLink id="sv3#miu9#oln31" name="OKFlow30" to="sv3#area4#page4#mssu14">
+        <LinkParameter id="sv3#miu9#oln31#par118" name="Account aggiunto con successo!_Shown Messages" target="sv3#area4#page4#mssu14.shownMessages" sourceValue="Account aggiunto con successo!"/>
+      </OKLink>
+      <KOLink id="sv3#miu9#kln20" name="KOFlow19" to="sv3#area4#page4#mssu14" automaticCoupling="true" gr:bendpoints="129,82,-116,-43"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="150" gr:y="885" id="sv3#miu15" action="true" moduleId="mov1#opm5">
+      <OKLink id="sv3#miu15#oln47" name="OKFlow47" to="sv3#area4#page19#mssu15">
+        <LinkParameter id="sv3#miu15#oln47#par143" name="Proprietario aggiunto con successo!_Shown Messages" sourceValue="Proprietario aggiunto con successo!" target="sv3#area4#page19#mssu15.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv3#miu15#kln23" name="KOFlow23" to="sv3#area4#page19#mssu15" gr:bendpoints="179,49,-111,-6">
+        <LinkParameter id="sv3#miu15#kln23#par144" name="Errore nell'aggiunta del proprietario_Shown Messages" sourceValue="Errore nell'aggiunta del proprietario" target="sv3#area4#page19#mssu15.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv3#miu18" gr:x="765" gr:y="1135" action="true" moduleId="mov1#opm6">
+      <OKLink id="sv3#miu18#oln36" name="OKFlow36" to="sv3#area4#page20#mssu19">
+        <LinkParameter id="sv3#miu18#oln36#par150" name="success message_Shown Messages" source="mov1#opm6#okcu10#ocp12" target="sv3#area4#page20#mssu19.shownMessages"/>
+        <LinkParameter id="sv3#miu18#oln36#par152" name="false_var5" sourceValue="false" targetVariable="sv3#area4#page20#var5"/>
+      </OKLink>
+      <KOLink id="sv3#miu18#kln27" name="KOFlow27" to="sv3#area4#page20#mssu19" gr:bendpoints="-227,202,243,-8">
+        <LinkParameter id="sv3#miu18#kln27#par151" name="error message_Shown Messages" source="mov1#opm6#kocu11#ocp13" target="sv3#area4#page20#mssu19.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="1565" gr:y="595" id="sv3#miu19" action="true" moduleId="mov1#opm13">
+      <OKLink id="sv3#miu19#oln52" name="OKFlow52" to="sv3#area4#page18#mssu22">
+        <LinkParameter id="sv3#miu19#oln52#par165" name="success message_Shown Messages" source="mov1#opm13#okcu11#ocp19" target="sv3#area4#page18#mssu22.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv3#miu19#kln30" name="KOFlow30" to="sv3#area4#page18#mssu22" gr:bendpoints="-127,52,73,-8">
+        <LinkParameter id="sv3#miu19#kln30#par166" name="error message_Shown Messages" source="mov1#opm13#kocu12#ocp20" target="sv3#area4#page18#mssu22.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</SiteView>

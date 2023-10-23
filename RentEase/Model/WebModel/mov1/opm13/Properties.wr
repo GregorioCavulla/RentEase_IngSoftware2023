@@ -1,0 +1,31 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="110" gr:y="290" id="mov1#opm13" name="Modifica Utente">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm13#icu13" gr:x="30" gr:y="60">
+      <InputCollectorParameter id="mov1#opm13#icu13#icp40" name="cognome"/>
+      <InputCollectorParameter id="mov1#opm13#icu13#icp39" name="nome"/>
+      <InputCollectorParameter id="mov1#opm13#icu13#icp38" name="email"/>
+      <InputCollectorParameter id="mov1#opm13#icu13#icp36" name="username"/>
+      <InputCollectorParameter id="mov1#opm13#icu13#icp35" name="oid"/>
+      <OKLink id="mov1#opm13#icu13#oln44" name="OKFlow44" to="mov1#opm13#mfu5">
+        <LinkParameter id="mov1#opm13#icu13#oln44#par157" name="cognome_Cognome" source="mov1#opm13#icu13#icp40" target="mov1#opm13#mfu5.User#att23"/>
+        <LinkParameter id="mov1#opm13#icu13#oln44#par158" name="email_email" source="mov1#opm13#icu13#icp38" target="mov1#opm13#mfu5.email"/>
+        <LinkParameter id="mov1#opm13#icu13#oln44#par159" name="oid_KeyCondition18 [oid]" source="mov1#opm13#icu13#icp35" target="mov1#opm13#mfu5#su33#kcond18.userOID"/>
+        <LinkParameter id="mov1#opm13#icu13#oln44#par160" name="nome_Nome" source="mov1#opm13#icu13#icp39" target="mov1#opm13#mfu5.User#att17"/>
+        <LinkParameter id="mov1#opm13#icu13#oln44#par161" name="username_userName" source="mov1#opm13#icu13#icp36" target="mov1#opm13#mfu5.userName"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <ModifyUnit gr:x="380" gr:y="105" id="mov1#opm13#mfu5" name="Update5" entity="User">
+      <Selector id="mov1#opm13#mfu5#su33" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm13#mfu5#su33#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm13#mfu5#oln50" name="OKFlow50" to="mov1#opm13#okcu11" automaticCoupling="true"/>
+      <KOLink id="mov1#opm13#mfu5#kln28" name="KOFlow28" to="mov1#opm13#kocu12" automaticCoupling="true"/>
+    </ModifyUnit>
+    <KOCollectorUnit gr:x="580" gr:y="185" id="mov1#opm13#kocu12" name="KO Port12">
+      <OutputCollectorParameter id="mov1#opm13#kocu12#ocp20" name="error message" value="Errore nella modifica dei dati, riprova."/>
+    </KOCollectorUnit>
+    <OKCollectorUnit gr:x="580" gr:y="90" id="mov1#opm13#okcu11" name="OK Port11">
+      <OutputCollectorParameter id="mov1#opm13#okcu11#ocp19" name="success message" value="I dati sono stati modificati correttamente."/>
+    </OKCollectorUnit>
+  </OperationUnits>
+</OperationModule>

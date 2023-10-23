@@ -1,0 +1,66 @@
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="820" gr:y="-205" id="sv1#mpage2" name="Welcome">
+  <ContentUnits>
+    <MultiMessageUnit id="sv1#mpage2#mssu9" name="Message" gr:x="0" gr:y="0">
+      <Message xml:space="preserve">Ciao!</Message>
+    </MultiMessageUnit>
+    <EntryUnit id="sv1#mpage2#enu2" name="Login" linkOrder="sv1#mpage2#enu2#ln24 sv1#mpage2#enu2#ln61 sv1#mpage2#enu2#ln17" gr:x="15" gr:y="180" fieldOrder="sv1#mpage2#enu2#fld10 sv1#mpage2#enu2#fld3">
+      <Field id="sv1#mpage2#enu2#fld3" name="password" type="password" modifiable="true">
+        <VRules/>
+      </Field>
+      <Field id="sv1#mpage2#enu2#fld10" name="username" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv1#mpage2#enu2#fld10#mnd1" name="Mandatory1"/>
+        </VRules>
+      </Field>
+      <Link id="sv1#mpage2#enu2#ln24" name="Login" to="sv1#miu6" type="normal" validate="true">
+        <LinkParameter id="sv1#mpage2#enu2#ln24#par14" name="password_password" source="sv1#mpage2#enu2#fld3" target="sv1#miu6.mov1#opm12#icu6#icp11"/>
+        <LinkParameter id="sv1#mpage2#enu2#ln24#par15" name="username_username" source="sv1#mpage2#enu2#fld10" target="sv1#miu6.mov1#opm12#icu6#icp12"/>
+      </Link>
+      <Link id="sv1#mpage2#enu2#ln61" name="Registrati" to="sv1#page8#enu3" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#mpage2#enu2#ln17" name="password dimenticata?" to="sv1#miu16" type="normal" validate="true">
+        <LinkParameter id="sv1#mpage2#enu2#ln17#par124" name="username_username" source="sv1#mpage2#enu2#fld10" target="sv1#miu16.mov1#opm4#icu10#icp24"/>
+      </Link>
+    </EntryUnit>
+    <GetUnit gr:x="150" gr:y="25" id="sv1#mpage2#gtu6" name="GetUsrCtx" contextParameters="UserCtxParam">
+      <Link id="sv1#mpage2#gtu6#ln26" name="Flow26" to="sv1#mpage2#dau5" type="transport" validate="true">
+        <LinkParameter id="sv1#mpage2#gtu6#ln26#par17" name="UserCtxParam.oid_KeyCondition9 [oid]" source="sv1#mpage2#gtu6.UserCtxParam" target="sv1#mpage2#dau5#su6#kcond9.userOID"/>
+      </Link>
+    </GetUnit>
+    <DataUnit gr:x="140" gr:y="160" id="sv1#mpage2#dau5" name="User Details" entity="User" displayAttributes="userName User#att17 User#att23" customDescriptor="false" linkOrder="sv1#mpage2#dau5#ln27 sv1#mpage2#dau5#ln51">
+      <Selector id="sv1#mpage2#dau5#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#mpage2#dau5#su6#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#mpage2#dau5#ln27" name="Logout" to="sv1#miu5" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#mpage2#dau5#ln51" name="visualizza Carrello" to="sv1#area1#page10" type="normal" automaticCoupling="true" validate="true"/>
+    </DataUnit>
+    <MultiMessageUnit gr:x="15" gr:y="85" id="sv1#mpage2#mssu13" name="Messaggio Forgot"/>
+  </ContentUnits>
+  <Variable id="sv1#mpage2#var3" name="UsrCtx" unitId="sv1#mpage2#gtu6" parameter="sv1#mpage2#gtu6.UserCtxParam"/>
+  <layout:CustomLocation name="Top">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Unit unitId="sv1#mpage2#mssu9"/>
+          <layout:Unit unitId="sv1#mpage2#dau5">
+            <layout:Attribute attribute="userName"/>
+            <layout:Attribute attribute="User#att17"/>
+            <layout:Attribute attribute="User#att23"/>
+            <layout:Link link="sv1#mpage2#dau5#ln27"/>
+            <layout:Link link="sv1#mpage2#dau5#ln51"/>
+          </layout:Unit>
+          <layout:Unit unitId="sv1#mpage2#enu2" layout:unitVisibilityCondition="sv1#mpage2#cexpr2" layout:unitVisibilityConditionNegated="true">
+            <layout:Field field="sv1#mpage2#enu2#fld10"/>
+            <layout:Field field="sv1#mpage2#enu2#fld3"/>
+            <layout:Link link="sv1#mpage2#enu2#ln24"/>
+            <layout:Link link="sv1#mpage2#enu2#ln61"/>
+            <layout:Link link="sv1#mpage2#enu2#ln17"/>
+          </layout:Unit>
+          <layout:Unit unitId="sv1#mpage2#mssu13"/>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <ConditionExpression id="sv1#mpage2#cexpr2" name="LoginActivationExpression">
+    <TextValue xml:space="preserve">UsrCtx&gt;'0'</TextValue>
+  </ConditionExpression>
+</MasterPage>

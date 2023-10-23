@@ -1,0 +1,64 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="20" id="sv3#area4#page4" name="Aggiungi Cliente">
+  <ContentUnits>
+    <EntryUnit id="sv3#area4#page4#enu5" name="Register Form" gr:x="0" gr:y="0" fieldOrder="sv3#area4#page4#enu5#fld28 sv3#area4#page4#enu5#fld29 sv3#area4#page4#enu5#fld16 sv3#area4#page4#enu5#fld15 sv3#area4#page4#enu5#fld14" linkOrder="sv3#area4#page4#enu5#ln28">
+      <Field id="sv3#area4#page4#enu5#fld14" name="password" type="password" modifiable="true"/>
+      <Field id="sv3#area4#page4#enu5#fld15" name="username" type="string" modifiable="true"/>
+      <Field id="sv3#area4#page4#enu5#fld16" name="email" type="string" modifiable="true"/>
+      <Field id="sv3#area4#page4#enu5#fld28" name="nome" type="string" modifiable="true"/>
+      <Field id="sv3#area4#page4#enu5#fld29" name="cognome" type="string" modifiable="true"/>
+      <Link id="sv3#area4#page4#enu5#ln28" name="Registra" to="sv3#miu9" type="normal" validate="true">
+        <LinkParameter id="sv3#area4#page4#enu5#ln28#par45" name="cognome_cognome" source="sv3#area4#page4#enu5#fld29" target="sv3#miu9.mov1#opm8#icu2#icp15"/>
+        <LinkParameter id="sv3#area4#page4#enu5#ln28#par59" name="email_email" source="sv3#area4#page4#enu5#fld16" target="sv3#miu9.mov1#opm8#icu2#icp4"/>
+        <LinkParameter id="sv3#area4#page4#enu5#ln28#par114" name="nome_nome" source="sv3#area4#page4#enu5#fld28" target="sv3#miu9.mov1#opm8#icu2#icp14"/>
+        <LinkParameter id="sv3#area4#page4#enu5#ln28#par115" name="password_password" source="sv3#area4#page4#enu5#fld14" target="sv3#miu9.mov1#opm8#icu2#icp2"/>
+        <LinkParameter id="sv3#area4#page4#enu5#ln28#par116" name="username_username" source="sv3#area4#page4#enu5#fld15" target="sv3#miu9.mov1#opm8#icu2#icp3"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="sv3#area4#page4#mssu14" name="Successo" linkOrder="sv3#area4#page4#mssu14#ln30" gr:x="15" gr:y="100">
+      <Link id="sv3#area4#page4#mssu14#ln30" name="torna alla pagina principale" to="sv3#area4#page2" type="normal" automaticCoupling="true" validate="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area4#page4#enu5">
+          <layout:Field field="sv3#area4#page4#enu5#fld28"/>
+          <layout:Field field="sv3#area4#page4#enu5#fld29"/>
+          <layout:Field field="sv3#area4#page4#enu5#fld16"/>
+          <layout:Field field="sv3#area4#page4#enu5#fld15"/>
+          <layout:Field field="sv3#area4#page4#enu5#fld14"/>
+          <layout:Link link="sv3#area4#page4#enu5#ln28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#area4#page4#mssu14">
+          <layout:Link link="sv3#area4#page4#mssu14#ln30"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

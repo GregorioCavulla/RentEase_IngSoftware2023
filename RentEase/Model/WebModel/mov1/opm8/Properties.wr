@@ -1,0 +1,42 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm8" name="Register" gr:x="110" gr:y="161">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm8#icu2" gr:x="35" gr:y="200" linkOrder="mov1#opm8#icu2#ln4">
+      <InputCollectorParameter id="mov1#opm8#icu2#icp2" name="password"/>
+      <InputCollectorParameter id="mov1#opm8#icu2#icp3" name="username"/>
+      <InputCollectorParameter id="mov1#opm8#icu2#icp4" name="email"/>
+      <InputCollectorParameter id="mov1#opm8#icu2#icp15" name="cognome"/>
+      <InputCollectorParameter id="mov1#opm8#icu2#icp14" name="nome"/>
+      <OKLink id="mov1#opm8#icu2#oln1" name="OKFlow1" to="mov1#opm8#seu1" automaticCoupling="true"/>
+      <Link id="mov1#opm8#icu2#ln4" name="Flow4" to="mov1#opm8#cru1" type="transport" validate="true">
+        <LinkParameter id="mov1#opm8#icu2#ln4#par1" name="cognome_Cognome" source="mov1#opm8#icu2#icp15" target="mov1#opm8#cru1.User#att23"/>
+        <LinkParameter id="mov1#opm8#icu2#ln4#par2" name="email_email" source="mov1#opm8#icu2#icp4" target="mov1#opm8#cru1.email"/>
+        <LinkParameter id="mov1#opm8#icu2#ln4#par3" name="nome_Nome" source="mov1#opm8#icu2#icp14" target="mov1#opm8#cru1.User#att17"/>
+        <LinkParameter id="mov1#opm8#icu2#ln4#par4" name="password_password" source="mov1#opm8#icu2#icp2" target="mov1#opm8#cru1.password"/>
+        <LinkParameter id="mov1#opm8#icu2#ln4#par5" name="username_userName" source="mov1#opm8#icu2#icp3" target="mov1#opm8#cru1.userName"/>
+      </Link>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov1#opm8#kocu2" name="KO Port" gr:x="650" gr:y="335">
+      <OutputCollectorParameter id="mov1#opm8#kocu2#ocp2" name="Error message"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit id="mov1#opm8#okcu2" name="OK Port" gr:x="650" gr:y="90">
+      <OutputCollectorParameter id="mov1#opm8#okcu2#ocp14" name="success message"/>
+    </OKCollectorUnit>
+    <CreateUnit id="mov1#opm8#cru1" name="Create User" gr:x="435" gr:y="265" entity="User">
+      <OKLink id="mov1#opm8#cru1#oln8" name="OKFlow6" to="mov1#opm8#okcu2">
+        <LinkParameter id="mov1#opm8#cru1#oln8#par71" name="Password_password" source="ent1#att6Array" target="mov1#opm8#okcu2#ocp3"/>
+        <LinkParameter id="mov1#opm8#cru1#oln8#par72" name="Username_username" source="ent1#att4Array" target="mov1#opm8#okcu2#ocp4"/>
+      </OKLink>
+      <KOLink id="mov1#opm8#cru1#kln6" name="KOFlow4" to="mov1#opm8#kocu2">
+        <LinkParameter id="mov1#opm8#cru1#kln6#par32" name="Unable to Create Account_Error message" target="mov1#opm8#kocu2#ocp2" sourceValue="Unable to Create Account"/>
+      </KOLink>
+    </CreateUnit>
+    <SelectorUnit gr:x="400" gr:y="115" id="mov1#opm8#seu1" name="Selector1" entity="Group">
+      <Selector id="mov1#opm8#seu1#su2" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#opm8#seu1#su2#acond1" name="AttCondition1" predicate="eq" booleanOperator="or" implied="false" attributes="groupName" value="Clienti" ignoreCase="true"/>
+      </Selector>
+      <OKLink id="mov1#opm8#seu1#oln2" name="OKFlow2" to="mov1#opm8#cru1">
+        <LinkParameter id="mov1#opm8#seu1#oln2#par6" name="oid_Group.oid(defaultGroup)" source="groupOIDArray" target="mov1#opm8#cru1.User2DefaultGroup.groupOID"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

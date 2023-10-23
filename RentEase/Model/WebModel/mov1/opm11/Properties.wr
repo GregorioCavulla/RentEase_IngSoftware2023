@@ -1,0 +1,24 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm11" name="Add Product to Cart" gr:x="410" gr:y="41">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm11#icu5" gr:x="15" gr:y="255">
+      <InputCollectorParameter id="mov1#opm11#icu5#icp8" name="quantit&#224;"/>
+      <InputCollectorParameter id="mov1#opm11#icu5#icp9" name="prezzo_unitario"/>
+      <OKLink id="mov1#opm11#icu5#oln18" name="OKFlow7" to="mov1#opm11#opg2#seu3" automaticCoupling="true"/>
+      <Link id="mov1#opm11#icu5#ln23" name="Flow20" to="mov1#opm11#opg2#cru5" type="transport" validate="true" gr:bendpoints="78,-167,-492,-167;576,-173,1,-168">
+        <LinkParameter id="mov1#opm11#icu5#ln23#par64" name="nome_prodotto_Nome" source="mov1#opm11#icu5#icp16" target="mov1#opm11#opg2#cru5.pkg1#ent2#att12"/>
+        <LinkParameter id="mov1#opm11#icu5#ln23#par66" name="prezzo_unitario_prezzo_unitario" source="mov1#opm11#icu5#icp9" target="mov1#opm11#opg2#cru5.pkg1#ent2#att14"/>
+        <LinkParameter id="mov1#opm11#icu5#ln23#par68" name="quantit&#224;_quantita" source="mov1#opm11#icu5#icp8" target="mov1#opm11#opg2#cru5.pkg1#ent2#att13"/>
+        <LinkParameter id="mov1#opm11#icu5#ln23#par56" name="id_prodotto_id_prodotto" source="mov1#opm11#icu5#icp22" target="mov1#opm11#opg2#cru5.pkg1#ent2#att6"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm11#icu5#icp16" name="nome_prodotto"/>
+      <Link id="mov1#opm11#icu5#ln48" name="Flow48" to="mov1#opm11#opg2#cru4" type="transport" validate="true" automaticCoupling="true"/>
+      <InputCollectorParameter id="mov1#opm11#icu5#icp22" name="id_prodotto"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov1#opm11#okcu4" name="OK Port" gr:x="820" gr:y="285">
+      <OutputCollectorParameter id="mov1#opm11#okcu4#ocp26" name="success message" value="Prodotto aggiunto con successo!"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm11#kocu4" name="KO Port" gr:x="820" gr:y="360">
+      <OutputCollectorParameter id="mov1#opm11#kocu4#ocp6" name="Error message"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>

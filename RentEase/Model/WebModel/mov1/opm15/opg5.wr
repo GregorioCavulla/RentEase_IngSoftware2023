@@ -1,0 +1,30 @@
+<OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm15#opg5" name="Transaction" transaction="true" gr:x="295" gr:y="250">
+  <OperationUnits>
+    <SelectorUnit id="mov1#opm15#opg5#seu8" name="Cart Selector" gr:x="0" gr:y="0" entity="pkg1#ent1">
+      <OKLink id="mov1#opm15#opg5#seu8#oln57" name="OKFlow8" to="mov1#opm15#opg5#inn3">
+        <LinkParameter id="mov1#opm15#opg5#seu8#oln57#par196" name="oid_Input" source="pkg1#ent1#att3Array" target="mov1#opm15#opg5#inn3.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit id="mov1#opm15#opg5#inn3" name="Is Not Null" gr:x="170" gr:y="10">
+      <KOLink id="mov1#opm15#opg5#inn3#kln33" name="KOFlow5" to="mov1#opm15#opg5#cru8" automaticCoupling="true"/>
+      <OKLink id="mov1#opm15#opg5#inn3#oln61" name="OKFlow61" to="mov1#opm15#opg5#mfu7">
+        <LinkParameter id="mov1#opm15#opg5#inn3#oln61#par204" name="Input Value_KeyCondition21 [oid]" source="inputValue" target="mov1#opm15#opg5#mfu7#su36#kcond21.pkg1#ent1#att3"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <CreateUnit id="mov1#opm15#opg5#cru8" name="Create Cart" gr:x="170" gr:y="165" entity="pkg1#ent1">
+      <OKLink id="mov1#opm15#opg5#cru8#oln63" name="OKFlow63" to="mov1#opm15#okcu13">
+        <LinkParameter id="mov1#opm15#opg5#cru8#oln63#par207" name="fineNoleggio_fineData" source="pkg1#ent1#att18Array" target="mov1#opm15#okcu13#ocp25"/>
+        <LinkParameter id="mov1#opm15#opg5#cru8#oln63#par208" name="inizioNoleggio_inizioData" source="pkg1#ent1#att16Array" target="mov1#opm15#okcu13#ocp24"/>
+      </OKLink>
+    </CreateUnit>
+    <ModifyUnit gr:x="330" gr:y="10" id="mov1#opm15#opg5#mfu7" name="Update Cart" entity="pkg1#ent1">
+      <Selector id="mov1#opm15#opg5#mfu7#su36" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm15#opg5#mfu7#su36#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm15#opg5#mfu7#oln62" name="OKFlow62" to="mov1#opm15#okcu13" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+  <KOLink id="mov1#opm15#opg5#kln34" name="KOFlow6" to="mov1#opm15#kocu14">
+    <LinkParameter id="mov1#opm15#opg5#kln34#par201" name="Unable to Add Product to Cart_Error message" target="mov1#opm15#kocu14#ocp23" sourceValue="Unable to Add Product to Cart"/>
+  </KOLink>
+</OperationGroup>

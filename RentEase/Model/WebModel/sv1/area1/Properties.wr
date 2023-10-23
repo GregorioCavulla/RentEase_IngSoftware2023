@@ -1,0 +1,32 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="605" gr:y="205" id="sv1#area1" name="Noleggia" landmark="true" protected="false" defaultPage="sv1#area1#miu21">
+  <OperationUnits>
+    <ModuleInstanceUnit id="sv1#area1#miu12" gr:x="825" gr:y="290" action="true" moduleId="mov1#opm11">
+      <OKLink id="sv1#area1#miu12#oln25" name="OKFlow12" to="sv1#area1#page10#mssu3">
+        <LinkParameter id="sv1#area1#miu12#oln25#par214" name="success message_Shown Messages" source="mov1#opm11#okcu4#ocp26" target="sv1#area1#page10#mssu3.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv1#area1#miu12#kln35" name="KOFlow35" to="sv1#area1#page10#mssu3" gr:bendpoints="-169,-104,141,121">
+        <LinkParameter id="sv1#area1#miu12#kln35#par213" name="Error message_Shown Messages" source="mov1#opm11#kocu4#ocp6" target="sv1#area1#page10#mssu3.shownMessages"/>
+      </KOLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv1#area1#miu13" gr:x="635" gr:y="345" action="true" moduleId="mov1#opm10">
+      <KOLink id="sv1#area1#miu13#kln12" name="KOFlow12" to="sv1#area1#page10#mssu3">
+        <LinkParameter id="sv1#area1#miu13#kln12#par27" name="Error message_Shown Messages" source="mov1#opm6#kocu5#ocp7" target="sv1#area1#page10#mssu3.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv1#area1#miu13#oln65" name="OKFlow65" to="sv1#area1#page10#mssu3" gr:bendpoints="15,-153,15,147">
+        <LinkParameter id="sv1#area1#miu13#oln65#par222" name="success message_Shown Messages" source="mov1#opm10#okcu3#ocp27" target="sv1#area1#page10#mssu3.shownMessages"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv1#area1#miu14" gr:x="595" gr:y="215" action="true" moduleId="mov1#opm7">
+      <KOLink id="sv1#area1#miu14#kln18" name="KOFlow11" to="sv1#area1#page10#mssu3">
+        <LinkParameter id="sv1#area1#miu14#kln18#par31" name="Error message_Shown Messages" source="mov1#opm5#kocu4#ocp6" target="sv1#area1#page10#mssu3.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv1#area1#miu14#oln26" name="OKFlow22" to="sv1#area1#page10" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="30" gr:y="195" id="sv1#area1#miu21" action="true" moduleId="mov1#opm15">
+      <OKLink id="sv1#area1#miu21#oln64" name="OKFlow64" to="sv1#area1#page17#qu6">
+        <LinkParameter id="sv1#area1#miu21#oln64#par211" name="fineData_fineData" source="mov1#opm15#okcu13#ocp25" target="sv1#area1#page17#qu6.sv1#area1#page17#qu6#qi7"/>
+        <LinkParameter id="sv1#area1#miu21#oln64#par212" name="inizioData_inizioData" source="mov1#opm15#okcu13#ocp24" target="sv1#area1#page17#qu6.sv1#area1#page17#qu6#qi6"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+  </OperationUnits>
+</Area>

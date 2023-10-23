@@ -1,0 +1,54 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="645" gr:y="205" id="sv2#area2#page3" name="Rimuovi Prodotto">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv2#area2#page3#dau8" name="Dettagli da rimuovere" entity="ent4" linkOrder="sv2#area2#page3#dau8#ln5">
+      <Selector id="sv2#area2#page3#dau8#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area2#page3#dau8#su17#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area2#page3#dau8#ln5" name="elimina definitivamente" to="sv2#area2#miu3" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page3#dau8#ln5#par21" name="oid_oid" source="data.ent4#att19" target="sv2#area2#miu3.mov1#opm3#icu9#icp23"/>
+      </Link>
+    </DataUnit>
+    <MultiMessageUnit gr:x="155" gr:y="100" id="sv2#area2#page3#mssu17" name="Messaggio" linkOrder="sv2#area2#page3#mssu17#ln63">
+      <Link id="sv2#area2#page3#mssu17#ln63" name="torna alla lista dei prodotti" to="sv2#area2#page11" automaticCoupling="true" type="normal" validate="true"/>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page3#dau8">
+          <layout:Link link="sv2#area2#page3#dau8#ln5"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page3#mssu17">
+          <layout:Link link="sv2#area2#page3#mssu17#ln63"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Variable id="sv2#area2#page3#var2" name="var2" type="boolean" value="false"/>
+</Page>

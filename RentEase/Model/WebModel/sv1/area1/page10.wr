@@ -1,0 +1,104 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page10" name="Cart" linkOrder="sv1#area1#page10#ln49" gr:x="450" gr:y="5">
+  <ContentUnits>
+    <IndexUnit id="sv1#area1#page10#inu7" name="CartItem List" linkOrder="sv1#area1#page10#inu7#ln45" gr:x="200" gr:y="10" entity="pkg1#ent2" displayAttributes="pkg1#ent2#att12 pkg1#ent2#att13 pkg1#ent2#att14 pkg1#ent2#att15">
+      <Link id="sv1#area1#page10#inu7#ln45" name="delete" to="sv1#area1#miu14" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page10#inu7#ln45#par33" name="oid_id_CartItem" source="data[].pkg1#ent2#att5" target="sv1#area1#miu14.mov1#opm7#icu1#icp1"/>
+      </Link>
+      <Link id="sv1#area1#page10#inu7#ln46" name="Flow45" to="sv1#area1#page10#dau10" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page10#inu7#ln46#par34" name="oid_RoleCondition2 [oid]" source="data[].pkg1#ent2#att5" target="sv1#area1#page10#dau10#su20#rcond9.pkg1#ent2#att5"/>
+      </Link>
+    </IndexUnit>
+    <MultiMessageUnit id="sv1#area1#page10#mssu3" name="Message" gr:x="420" gr:y="20">
+      <Message xml:space="preserve">Your Cart</Message>
+    </MultiMessageUnit>
+    <DataUnit id="sv1#area1#page10#dau10" name="Cart Details" linkOrder="sv1#area1#page10#dau10#ln47 sv1#area1#page10#dau10#ln87" gr:x="0" gr:y="0" entity="pkg1#ent1" displayAttributes="pkg1#ent1#att16 pkg1#ent1#att18 pkg1#ent1#att4">
+      <Selector id="sv1#area1#page10#dau10#su20" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area1#page10#dau10#su20#rcond9" name="RoleCondition2" role="rel1#role1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area1#page10#dau10#ln47" name="conferma l'ordine" to="sv1#area1#miu13" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page10#dau10#ln47#par35" name="oid_id_Cart" source="data.pkg1#ent1#att3" target="sv1#area1#miu13.mov1#opm10#icu4#icp5"/>
+      </Link>
+      <Link id="sv1#area1#page10#dau10#ln87" name="aggiungi altri prodotti al carrello" to="sv1#area1#page17#qu6" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page10#dau10#ln87#par215" name="fineNoleggio_fineData" source="data.pkg1#ent1#att18" target="sv1#area1#page17#qu6.sv1#area1#page17#qu6#qi7"/>
+        <LinkParameter id="sv1#area1#page10#dau10#ln87#par216" name="inizioNoleggio_inizioData" source="data.pkg1#ent1#att16" target="sv1#area1#page17#qu6.sv1#area1#page17#qu6#qi6"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page10#mssu3"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page10#inu7">
+          <layout:Attribute attribute="pkg1#ent2#att12"/>
+          <layout:Attribute attribute="pkg1#ent2#att13"/>
+          <layout:Attribute attribute="pkg1#ent2#att14"/>
+          <layout:Attribute attribute="pkg1#ent2#att15"/>
+          <layout:Link link="sv1#area1#page10#inu7#ln45"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page10#dau10">
+          <layout:Link link="sv1#area1#page10#dau10#ln47"/>
+          <layout:Link link="sv1#area1#page10#dau10#ln87"/>
+          <layout:Attribute attribute="pkg1#ent1#att16"/>
+          <layout:Attribute attribute="pkg1#ent1#att18"/>
+          <layout:Attribute attribute="pkg1#ent1#att4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv1#area1#page10#ln49" name="aggiungi altri prodotti al carrello" to="sv1#area1#page17" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

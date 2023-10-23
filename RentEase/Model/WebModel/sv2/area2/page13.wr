@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="650" gr:y="30" id="sv2#area2#page13" name="Aggiungi Prodotto">
+  <ContentUnits>
+    <EntryUnit id="sv2#area2#page13#enu9" name="Form Aggiunta" gr:x="0" gr:y="0" linkOrder="sv2#area2#page13#enu9#ln42">
+      <Field id="sv2#area2#page13#enu9#fld24" name="Nome" type="string" modifiable="true"/>
+      <Field id="sv2#area2#page13#enu9#fld25" name="Descrizione" type="string" modifiable="true"/>
+      <Field id="sv2#area2#page13#enu9#fld26" name="Prezzo" type="decimal" modifiable="true"/>
+      <Field id="sv2#area2#page13#enu9#fld27" name="Quantita" type="integer" modifiable="true"/>
+      <Link id="sv2#area2#page13#enu9#ln42" name="Aggiungi Prodotto" to="sv2#area2#miu11" type="normal" validate="true">
+        <LinkParameter id="sv2#area2#page13#enu9#ln42#par104" name="Descrizione_descrizione" source="sv2#area2#page13#enu9#fld25" target="sv2#area2#miu11.mov1#opm2#icu8#icp19"/>
+        <LinkParameter id="sv2#area2#page13#enu9#ln42#par105" name="Nome_nome" source="sv2#area2#page13#enu9#fld24" target="sv2#area2#miu11.mov1#opm2#icu8#icp18"/>
+        <LinkParameter id="sv2#area2#page13#enu9#ln42#par106" name="Prezzo_prezzo" source="sv2#area2#page13#enu9#fld26" target="sv2#area2#miu11.mov1#opm2#icu8#icp20"/>
+        <LinkParameter id="sv2#area2#page13#enu9#ln42#par107" name="Quantita_quantita" source="sv2#area2#page13#enu9#fld27" target="sv2#area2#miu11.mov1#opm2#icu8#icp21"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="125" gr:y="50" id="sv2#area2#page13#mssu18" name="Messaggio"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page13#enu9">
+          <layout:Link link="sv2#area2#page13#enu9#ln42"/>
+          <layout:Field field="sv2#area2#page13#enu9#fld24"/>
+          <layout:Field field="sv2#area2#page13#enu9#fld25"/>
+          <layout:Field field="sv2#area2#page13#enu9#fld26"/>
+          <layout:Field field="sv2#area2#page13#enu9#fld27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page13#mssu18"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

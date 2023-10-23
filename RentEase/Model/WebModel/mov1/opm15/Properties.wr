@@ -1,0 +1,24 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm15" name="Init Cart" gr:x="470" gr:y="317">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm15#icu15" gr:x="15" gr:y="255" linkOrder="mov1#opm15#icu15#ln85">
+      <OKLink id="mov1#opm15#icu15#oln56" name="OKFlow7" to="mov1#opm15#opg5#seu8" automaticCoupling="true"/>
+      <Link id="mov1#opm15#icu15#ln83" name="Flow48" to="mov1#opm15#opg5#cru8" type="transport" validate="true">
+        <LinkParameter id="mov1#opm15#icu15#ln83#par202" name="fineData_fineNoleggio" source="mov1#opm15#icu15#icp48" target="mov1#opm15#opg5#cru8.pkg1#ent1#att18"/>
+        <LinkParameter id="mov1#opm15#icu15#ln83#par203" name="inizioData_inizioNoleggio" source="mov1#opm15#icu15#icp49" target="mov1#opm15#opg5#cru8.pkg1#ent1#att16"/>
+      </Link>
+      <InputCollectorParameter id="mov1#opm15#icu15#icp48" name="fineData"/>
+      <InputCollectorParameter id="mov1#opm15#icu15#icp49" name="inizioData"/>
+      <Link id="mov1#opm15#icu15#ln85" name="Flow85" to="mov1#opm15#opg5#mfu7" type="transport" validate="true" gr:bendpoints="81,-133,-484,-178;563,-134,-2,-179">
+        <LinkParameter id="mov1#opm15#icu15#ln85#par205" name="fineData_fineNoleggio" source="mov1#opm15#icu15#icp48" target="mov1#opm15#opg5#mfu7.pkg1#ent1#att18"/>
+        <LinkParameter id="mov1#opm15#icu15#ln85#par206" name="inizioData_inizioNoleggio" source="mov1#opm15#icu15#icp49" target="mov1#opm15#opg5#mfu7.pkg1#ent1#att16"/>
+      </Link>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov1#opm15#okcu13" name="OK Port" gr:x="820" gr:y="285">
+      <OutputCollectorParameter id="mov1#opm15#okcu13#ocp25" name="fineData"/>
+      <OutputCollectorParameter id="mov1#opm15#okcu13#ocp24" name="inizioData"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm15#kocu14" name="KO Port" gr:x="820" gr:y="360">
+      <OutputCollectorParameter id="mov1#opm15#kocu14#ocp23" name="Error message"/>
+    </KOCollectorUnit>
+  </OperationUnits>
+</OperationModule>
