@@ -1,0 +1,62 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page6" name="Add to Cart" gr:x="660" gr:y="455">
+  <ContentUnits>
+    <DataUnit id="sv1#area1#page6#dau9" name="Product Details" gr:x="0" gr:y="0" entity="ent4" displayAttributes="ent4#att20 ent4#att24">
+      <Selector id="sv1#area1#page6#dau9#su19" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#page6#dau9#su19#kcond12" name="KeyCondition1" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area1#page6#dau9#ln37" name="Flow22" to="sv1#area1#miu12" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page6#dau9#ln37#par28" name="Nome_nome" source="data.ent4#att20" target="sv1#area1#miu12.mov1#opm11#icu5#icp16"/>
+        <LinkParameter id="sv1#area1#page6#dau9#ln37#par29" name="Prezzo_prezzo_unitario" source="data.ent4#att24" target="sv1#area1#miu12.mov1#opm11#icu5#icp9"/>
+      </Link>
+    </DataUnit>
+    <EntryUnit id="sv1#area1#page6#enu4" name="Quantity Form" linkOrder="sv1#area1#page6#enu4#ln44" gr:x="155" gr:y="20">
+      <Field id="sv1#area1#page6#enu4#fld11" name="quantity" type="integer" modifiable="true">
+        <Slot id="sv1#area1#page6#enu4#fld11#slot2" name="DefaultValue" label="true" output="true" value="1"/>
+        <VRules/>
+      </Field>
+      <Link id="sv1#area1#page6#enu4#ln44" name="Aggiungi al carrello" to="sv1#area1#miu12" type="normal" validate="true">
+        <LinkParameter id="sv1#area1#page6#enu4#ln44#par30" name="quantity_quantit&#224;" source="sv1#area1#page6#enu4#fld11" target="sv1#area1#miu12.mov1#opm11#icu5#icp8"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page6#dau9">
+          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area1#page6#enu4">
+          <layout:Link link="sv1#area1#page6#enu4#ln44"/>
+          <layout:Field field="sv1#area1#page6#enu4#fld11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

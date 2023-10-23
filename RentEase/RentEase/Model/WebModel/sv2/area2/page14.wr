@@ -1,0 +1,52 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="935" gr:y="200" id="sv2#area2#page14" name="Successo Aggiunta" linkOrder="sv2#area2#page14#ln64">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv2#area2#page14#mssu11" name="Message11">
+      <Message xml:space="preserve">Il prodotto &#232; stato aggiunto con successo!</Message>
+    </MultiMessageUnit>
+    <DataUnit gr:x="115" gr:y="30" id="sv2#area2#page14#dau4" name="Details4" entity="ent4" displayAttributes="ent4#att20 ent4#att21 ent4#att22 ent4#att24">
+      <Selector id="sv2#area2#page14#dau4#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area2#page14#dau4#su24#kcond16" name="KeyCondition16" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page14#mssu11"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#area2#page14#dau4">
+          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att21"/>
+          <layout:Attribute attribute="ent4#att22"/>
+          <layout:Attribute attribute="ent4#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv2#area2#page14#ln64" name="torna alla lista dei prodotti" to="sv2#area2#page11" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

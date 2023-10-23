@@ -1,0 +1,24 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm3" name="Rimuovi Prodotto" gr:x="710" gr:y="100">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm3#icu9" gr:x="-15" gr:y="265">
+      <InputCollectorParameter id="mov1#opm3#icu9#icp23" name="oid"/>
+      <OKLink id="mov1#opm3#icu9#oln42" name="OKFlow42" to="mov1#opm3#mfu2">
+        <LinkParameter id="mov1#opm3#icu9#oln42#par60" name="oid_KeyCondition14 [oid]" source="mov1#opm3#icu9#icp23" target="mov1#opm3#mfu2#su22#kcond14.ent4#att19"/>
+        <LinkParameter id="mov1#opm3#icu9#oln42#par61" name="0_Quantita" sourceValue="0" target="mov1#opm3#mfu2.ent4#att22"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit id="mov1#opm3#okcu7" name="OK Port" gr:x="610" gr:y="225">
+      <OutputCollectorParameter id="mov1#opm3#okcu7#ocp18" name="success message"/>
+    </OKCollectorUnit>
+    <KOCollectorUnit id="mov1#opm3#kocu8" name="KO Port" gr:x="610" gr:y="315">
+      <OutputCollectorParameter id="mov1#opm3#kocu8#ocp11" name="Error message"/>
+    </KOCollectorUnit>
+    <ModifyUnit gr:x="325" gr:y="265" id="mov1#opm3#mfu2" name="Rimuovi Prodotto" entity="ent4">
+      <Selector id="mov1#opm3#mfu2#su22" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov1#opm3#mfu2#su22#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov1#opm3#mfu2#oln43" name="OKFlow43" to="mov1#opm3#okcu7" automaticCoupling="true"/>
+      <KOLink id="mov1#opm3#mfu2#kln17" name="KOFlow17" to="mov1#opm3#kocu8" automaticCoupling="true"/>
+    </ModifyUnit>
+  </OperationUnits>
+</OperationModule>

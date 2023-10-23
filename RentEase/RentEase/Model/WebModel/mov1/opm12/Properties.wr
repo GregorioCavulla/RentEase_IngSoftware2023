@@ -1,0 +1,20 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm12" name="Login" gr:x="110" gr:y="41">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm12#icu6" gr:x="60" gr:y="125">
+      <InputCollectorParameter id="mov1#opm12#icu6#icp11" name="password"/>
+      <InputCollectorParameter id="mov1#opm12#icu6#icp12" name="username"/>
+      <OKLink id="mov1#opm12#icu6#oln23" name="OKFlow2" to="mov1#opm12#lgu1">
+        <LinkParameter id="mov1#opm12#icu6#oln23#par53" name="username_Username" source="mov1#opm12#icu6#icp12" target="mov1#opm12#lgu1.username"/>
+        <LinkParameter id="mov1#opm12#icu6#oln23#par54" name="password_Password" source="mov1#opm12#icu6#icp11" target="mov1#opm12#lgu1.password"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov1#opm12#kocu5" name="KO Port" gr:x="480" gr:y="125">
+      <OutputCollectorParameter id="mov1#opm12#kocu5#ocp7" name="Error message"/>
+    </KOCollectorUnit>
+    <LoginUnit id="mov1#opm12#lgu1" name="Login" gr:x="340" gr:y="135">
+      <KOLink id="mov1#opm12#lgu1#kln10" name="KOFlow3" to="mov1#opm12#kocu5">
+        <LinkParameter id="mov1#opm12#lgu1#kln10#par55" name="Error Message_Error message" source="errorMessage" target="mov1#opm12#kocu5#ocp7"/>
+      </KOLink>
+    </LoginUnit>
+  </OperationUnits>
+</OperationModule>

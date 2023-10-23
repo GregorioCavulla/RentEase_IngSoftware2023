@@ -1,0 +1,23 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm10" name="Buy Cart" gr:x="410" gr:y="155">
+  <OperationUnits>
+    <InputCollectorUnit id="mov1#opm10#icu4" gr:x="-220" gr:y="270">
+      <InputCollectorParameter id="mov1#opm10#icu4#icp5" name="id_Cart"/>
+      <Link id="mov1#opm10#icu4#ln18" name="Flow24" to="mov1#opm10#opg1#seu2" type="transport" validate="true" gr:bendpoints="222,-139,-558,-139;426,-137,-94,-137">
+        <LinkParameter id="mov1#opm10#icu4#ln18#par109" name="id_Cart_RoleConditionCartToCartItem [oid]" source="mov1#opm10#icu4#icp5" target="mov1#opm10#opg1#seu2#su11#rcond4.pkg1#ent1#att3"/>
+      </Link>
+      <Link id="mov1#opm10#icu4#ln19" name="Flow26" to="mov1#opm10#opg1#dlu2" type="transport" validate="true" gr:bendpoints="221,270,-679,270;662,271,-238,271">
+        <LinkParameter id="mov1#opm10#icu4#ln19#par111" name="id_Cart_RoleConditionCartToCartItem [oid]" source="mov1#opm10#icu4#icp5" target="mov1#opm10#opg1#dlu2#su12#rcond5.pkg1#ent1#att3"/>
+      </Link>
+      <Link id="mov1#opm10#icu4#ln20" name="Flow27" to="mov1#opm10#opg1#dlu3" type="transport" validate="true" gr:bendpoints="213,304,-847,304;849,304,-211,304">
+        <LinkParameter id="mov1#opm10#icu4#ln20#par112" name="id_Cart_KeyCondition8 [oid]" source="mov1#opm10#icu4#icp5" target="mov1#opm10#opg1#dlu3#su13#kcond6.pkg1#ent1#att3"/>
+      </Link>
+      <OKLink id="mov1#opm10#icu4#oln10" name="OKFlow27" to="mov1#opm10#opg1#tmu1" automaticCoupling="true"/>
+    </InputCollectorUnit>
+    <KOCollectorUnit id="mov1#opm10#kocu3" name="KO Port" gr:x="1400" gr:y="335">
+      <OutputCollectorParameter id="mov1#opm10#kocu3#ocp5" name="Error message"/>
+    </KOCollectorUnit>
+    <OKCollectorUnit id="mov1#opm10#okcu3" name="OK Port" gr:x="1400" gr:y="270">
+      <OutputCollectorParameter id="mov1#opm10#okcu3#ocp27" name="success message" value="Prodotto aggiunto con successo!"/>
+    </OKCollectorUnit>
+  </OperationUnits>
+</OperationModule>
