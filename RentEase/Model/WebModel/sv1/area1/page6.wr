@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page6" name="Add to Cart" gr:x="660" gr:y="455">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page6" name="Add to Cart" gr:x="655" gr:y="480">
   <ContentUnits>
     <DataUnit id="sv1#area1#page6#dau9" name="Product Details" gr:x="0" gr:y="0" entity="ent4" displayAttributes="ent4#att20 ent4#att24">
       <Selector id="sv1#area1#page6#dau9#su19" defaultPolicy="fill" booleanOperator="and">
@@ -7,17 +7,54 @@
       <Link id="sv1#area1#page6#dau9#ln37" name="Flow22" to="sv1#area1#miu12" type="transport" validate="true">
         <LinkParameter id="sv1#area1#page6#dau9#ln37#par28" name="Nome_nome" source="data.ent4#att20" target="sv1#area1#miu12.mov1#opm11#icu5#icp16"/>
         <LinkParameter id="sv1#area1#page6#dau9#ln37#par29" name="Prezzo_prezzo_unitario" source="data.ent4#att24" target="sv1#area1#miu12.mov1#opm11#icu5#icp9"/>
+        <LinkParameter id="sv1#area1#page6#dau9#ln37#par57" name="oid_id_prodotto" source="data.ent4#att19" target="sv1#area1#miu12.mov1#opm11#icu5#icp22"/>
+      </Link>
+      <Link id="sv1#area1#page6#dau9#ln47" name="Flow47" to="sv1#area1#page6#qu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page6#dau9#ln47#par58" name="oid_id_prodotto" source="data.ent4#att19" target="sv1#area1#page6#qu1.sv1#area1#page6#qu1#qi3"/>
       </Link>
     </DataUnit>
     <EntryUnit id="sv1#area1#page6#enu4" name="Quantity Form" linkOrder="sv1#area1#page6#enu4#ln44" gr:x="155" gr:y="20">
       <Field id="sv1#area1#page6#enu4#fld11" name="quantity" type="integer" modifiable="true">
         <Slot id="sv1#area1#page6#enu4#fld11#slot2" name="DefaultValue" label="true" output="true" value="1"/>
-        <VRules/>
+        <VRules>
+          <CompareValidationRule id="sv1#area1#page6#enu4#fld11#cmp3" name="Compare3" predicate="lteq" valueField="sv1#area1#page6#enu4#fld46"/>
+        </VRules>
       </Field>
       <Link id="sv1#area1#page6#enu4#ln44" name="Aggiungi al carrello" to="sv1#area1#miu12" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page6#enu4#ln44#par30" name="quantity_quantit&#224;" source="sv1#area1#page6#enu4#fld11" target="sv1#area1#miu12.mov1#opm11#icu5#icp8"/>
       </Link>
+      <Field id="sv1#area1#page6#enu4#fld46" name="Massima quantit&#224; disponibile" type="integer" modifiable="false" preloaded="true"/>
     </EntryUnit>
+    <QueryUnit id="sv1#area1#page6#qu1" name="QueryProdottiDisp" gr:x="170" gr:y="140" mode="select" language="SQL" db="db1">
+      <QueryText xml:space="preserve">SELECT p1.QUANTITA - COALESCE(prenotazioni.QUANTITA_PRENOTATA, 0) AS QUANTITA_DISPONIBILE
+FROM PRODOTTO p1
+LEFT JOIN (
+  SELECT p2.ID, SUM(l.QUANTITA) AS QUANTITA_PRENOTATA
+  FROM PRODOTTO p2
+  JOIN LINEA_ORDINE l ON p2.ID = l.ID_PRODOTTO JOIN ORDINE o ON o.id = l.id_ordine
+  WHERE (INIZIONOLEGGIO BETWEEN :inizioData AND :fineData)
+     OR (FINENOLEGGIO BETWEEN :inizioData AND :fineData)
+     OR (INIZIONOLEGGIO &lt;= :inizioData AND FINENOLEGGIO &gt;= :fineData)
+     OR (INIZIONOLEGGIO &gt;= :inizioData AND FINENOLEGGIO &lt;= :fineData)
+  GROUP BY p2.ID 
+) AS prenotazioni ON p1.ID = prenotazioni.ID
+WHERE p1.id = :idProdotto
+ORDER BY p1.ID;</QueryText>
+      <QueryInput id="sv1#area1#page6#qu1#qi1" name="inizioData" required="true" type="date"/>
+      <QueryInput id="sv1#area1#page6#qu1#qi2" name="fineData" required="true"/>
+      <QueryOutput id="sv1#area1#page6#qu1#qo2" name="dispEffettiva" type="integer"/>
+      <QueryInput id="sv1#area1#page6#qu1#qi3" name="idProdotto" required="true" type="integer"/>
+      <Link id="sv1#area1#page6#qu1#ln49" name="Flow49" to="sv1#area1#page6#enu4" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page6#qu1#ln49#par78" name="dispEffettiva_Massima quantit&#224; disponibile" source="sv1#area1#page6#qu1#qo2" target="sv1#area1#page6#enu4#fld46_slot"/>
+      </Link>
+    </QueryUnit>
+    <DataUnit id="sv1#area1#page6#dau12" name="Cart Details" gr:x="0" gr:y="135" entity="pkg1#ent1">
+      <Selector id="sv1#area1#page6#dau12#su11" defaultPolicy="fill" booleanOperator="and"/>
+      <Link id="sv1#area1#page6#dau12#ln22" name="Flow22" to="sv1#area1#page6#qu1" type="transport" validate="true">
+        <LinkParameter id="sv1#area1#page6#dau12#ln22#par35" name="fineNoleggio_fineData" source="data.pkg1#ent1#att18" target="sv1#area1#page6#qu1.sv1#area1#page6#qu1#qi2"/>
+        <LinkParameter id="sv1#area1#page6#dau12#ln22#par36" name="inizioNoleggio_inizioData" source="data.pkg1#ent1#att16" target="sv1#area1#page6#qu1.sv1#area1#page6#qu1#qi1"/>
+      </Link>
+    </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -44,8 +81,37 @@
         <layout:Unit unitId="sv1#area1#page6#enu4">
           <layout:Link link="sv1#area1#page6#enu4#ln44"/>
           <layout:Field field="sv1#area1#page6#enu4#fld11"/>
+          <layout:Field field="sv1#area1#page6#enu4#fld46"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

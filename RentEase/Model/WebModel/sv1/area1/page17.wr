@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page17" name="Scegli Prodotti" gr:x="210" gr:y="335">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page17" name="Scegli Prodotti" gr:x="165" gr:y="315">
   <ContentUnits>
-    <IndexUnit id="sv1#area1#page17#inu9" name="Risultati" gr:x="5" gr:y="130" entity="ent4" displayAttributes="ent4#att20 ent4#att24" linkOrder="sv1#area1#page17#inu9#ln52">
+    <IndexUnit id="sv1#area1#page17#inu9" name="Risultati" gr:x="0" gr:y="130" entity="ent4" displayAttributes="ent4#att20 ent4#att24" linkOrder="sv1#area1#page17#inu9#ln52">
       <Selector id="sv1#area1#page17#inu9#su27" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area1#page17#inu9#su27#acond5" name="DateCondition" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att19" ignoreCase="true"/>
         <AttributesCondition id="sv1#area1#page17#inu9#su27#acond6" name="SearchCondition" predicate="contains" booleanOperator="or" implied="true" attributes="ent4#att20" ignoreCase="true"/>
@@ -9,7 +9,7 @@
         <LinkParameter id="sv1#area1#page17#inu9#ln52#par38" name="oid_KeyCondition1 [oid]" source="data[].ent4#att19" target="sv1#area1#page6#dau9#su19#kcond12.ent4#att19"/>
       </Link>
     </IndexUnit>
-    <EntryUnit id="sv1#area1#page17#enu10" name="Ricerca" linkOrder="sv1#area1#page17#enu10#ln58" gr:x="235" gr:y="105">
+    <EntryUnit id="sv1#area1#page17#enu10" name="Ricerca" linkOrder="sv1#area1#page17#enu10#ln58" gr:x="230" gr:y="105">
       <Field id="sv1#area1#page17#enu10#fld13" name="Parola chiave" type="string" modifiable="true"/>
       <Link id="sv1#area1#page17#enu10#ln58" name="Cerca" to="sv1#area1#page17#inu9" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page17#enu10#ln58#par135" name="query_SearchCondition" source="sv1#area1#page17#enu10#fld13" target="sv1#area1#page17#inu9#su27#acond6"/>
@@ -37,12 +37,9 @@ ORDER BY p1.ID;</QueryText>
       </Link>
       <QueryOutput id="sv1#area1#page17#qu6#qo8" name="dispEffettiva" type="integer"/>
     </QueryUnit>
-    <MultiMessageUnit id="sv1#area1#page17#mssu5" name="Message" gr:x="200" gr:y="25">
+    <MultiMessageUnit id="sv1#area1#page17#mssu5" name="Message" gr:x="195" gr:y="25">
       <Message xml:space="preserve">Puoi eseguire una ricerca inserendo una parola chiave nel form sottostante</Message>
     </MultiMessageUnit>
-    <DataUnit id="sv1#area1#page17#dau11" name="Cart Details" gr:x="245" gr:y="217" entity="pkg1#ent1" displayAttributes="pkg1#ent1#att4 pkg1#ent1#att16 pkg1#ent1#att18">
-      <Selector id="sv1#area1#page17#dau11#su37" defaultPolicy="fill" booleanOperator="and"/>
-    </DataUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -101,9 +98,7 @@ ORDER BY p1.ID;</QueryText>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area1#page17#qu6"/>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -117,13 +112,7 @@ ORDER BY p1.ID;</QueryText>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area1#page17#dau11">
-          <layout:Attribute attribute="pkg1#ent1#att4"/>
-          <layout:Attribute attribute="pkg1#ent1#att16"/>
-          <layout:Attribute attribute="pkg1#ent1#att18"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

@@ -1,4 +1,4 @@
-<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="820" gr:y="-205" id="sv1#mpage2" name="Welcome">
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="865" gr:y="-205" id="sv1#mpage2" name="Welcome">
   <ContentUnits>
     <MultiMessageUnit id="sv1#mpage2#mssu9" name="Message" gr:x="0" gr:y="0">
       <Message xml:space="preserve">Ciao!</Message>

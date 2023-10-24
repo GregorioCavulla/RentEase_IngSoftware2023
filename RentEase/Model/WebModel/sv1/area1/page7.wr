@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page7" name="Seleziona Data" gr:x="250" gr:y="25">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page7" name="Seleziona Data" gr:x="250" gr:y="15">
   <ContentUnits>
     <EntryUnit id="sv1#area1#page7#enu6" name="selezionaData" gr:x="0" gr:y="75" fieldOrder="sv1#area1#page7#enu6#fld1 sv1#area1#page7#enu6#fld2" linkOrder="sv1#area1#page7#enu6#ln86">
       <Field id="sv1#area1#page7#enu6#fld1" name="inizioData" type="date" modifiable="true">
@@ -11,7 +11,7 @@
           <CompareValidationRule id="sv1#area1#page7#enu6#fld2#cmp2" name="Compare2" predicate="gteq" valueField="sv1#area1#page7#enu6#fld1"/>
         </VRules>
       </Field>
-      <Link id="sv1#area1#page7#enu6#ln86" name="Flow86" to="sv1#area1#miu21" type="normal" validate="true">
+      <Link id="sv1#area1#page7#enu6#ln86" name="cerca" to="sv1#area1#miu21" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page7#enu6#ln86#par209" name="fineData_fineData" source="sv1#area1#page7#enu6#fld2" target="sv1#area1#miu21.mov1#opm15#icu15#icp48"/>
         <LinkParameter id="sv1#area1#page7#enu6#ln86#par210" name="inizioData_inizioData" source="sv1#area1#page7#enu6#fld1" target="sv1#area1#miu21.mov1#opm15#icu15#icp49"/>
       </Link>

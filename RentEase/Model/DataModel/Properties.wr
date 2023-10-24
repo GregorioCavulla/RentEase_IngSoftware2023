@@ -65,8 +65,7 @@
     <Attribute id="ent6#att1" name="prezzo_totale" type="decimal" db:column="PREZZO_TOTALE"/>
     <Attribute id="ent6#att26" name="dataOrdine" type="date" db:column="DATAORDINE"/>
   </Entity>
-  <db:Database id="db1" name="TW_STUD" type="DB2 Universal Driver" url="jdbc:db2://diva.deis.unibo.it:50000/TW_STUD" cryptedPassword="true" username="A0971235" password="Q2FsdGFuaXNzZXR0NA==">
-  </db:Database>
+  <db:Database id="db1" name="TW_STUD" type="DB2 Universal Driver" url="jdbc:db2://diva.deis.unibo.it:50000/TW_STUD" cryptedPassword="true" username="A0971235" password="Q2FsdGFuaXNzZXR0NA=="/>
   <Entity gr:x="445" gr:y="100" id="ent9" name="LineaOrdine" duration="persistent" attributeOrder="ent9#att38 ent9#att2" db:database="db1" db:schema="A0971235" db:table="LINEA_ORDINE">
     <Attribute id="ent9#att38" key="true" name="oid" type="integer" db:column="ID" db:idGenerator="identity"/>
     <Attribute id="ent9#att2" name="quantita" type="integer" db:column="QUANTITA"/>
