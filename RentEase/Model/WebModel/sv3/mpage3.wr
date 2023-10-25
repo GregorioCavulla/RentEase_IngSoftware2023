@@ -1,6 +1,6 @@
 <MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#mpage3" name="Welcome" gr:x="920" gr:y="85">
   <ContentUnits>
-    <MultiMessageUnit id="sv3#mpage3#mssu2" name="Message" gr:x="0" gr:y="0">
+    <MultiMessageUnit id="sv3#mpage3#mssu2" name="Messaggio" gr:x="0" gr:y="0">
       <Message xml:space="preserve">Benvenuto nell'area riservata agli amministratori.</Message>
     </MultiMessageUnit>
     <EntryUnit id="sv3#mpage3#enu1" name="Login" linkOrder="sv3#mpage3#enu1#ln1" gr:x="15" gr:y="165" fieldOrder="sv3#mpage3#enu1#fld12 sv3#mpage3#enu1#fld7">
@@ -16,7 +16,7 @@
         <LinkParameter id="sv3#mpage3#gtu1#ln2#par10" name="UserCtxParam.oid_KeyCondition9 [oid]" source="sv3#mpage3#gtu1.UserCtxParam" target="sv3#mpage3#dau6#su7#kcond10.userOID"/>
       </Link>
     </GetUnit>
-    <DataUnit id="sv3#mpage3#dau6" name="User Details" linkOrder="sv3#mpage3#dau6#ln6" customDescriptor="false" gr:x="140" gr:y="160" entity="User" displayAttributes="userName User#att17 User#att23">
+    <DataUnit id="sv3#mpage3#dau6" name="Dettagli Utente" linkOrder="sv3#mpage3#dau6#ln6" customDescriptor="false" gr:x="140" gr:y="160" entity="User" displayAttributes="userName User#att17 User#att23">
       <Selector id="sv3#mpage3#dau6#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#mpage3#dau6#su7#kcond10" name="KeyCondition9" predicate="in" implied="false"/>
       </Selector>

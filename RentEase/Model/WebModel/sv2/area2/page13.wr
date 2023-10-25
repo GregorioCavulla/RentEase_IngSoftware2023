@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="650" gr:y="30" id="sv2#area2#page13" name="Aggiungi Prodotto">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="635" gr:y="20" id="sv2#area2#page13" name="Aggiungi Prodotto">
   <ContentUnits>
-    <EntryUnit id="sv2#area2#page13#enu9" name="Form Aggiunta" gr:x="0" gr:y="0" linkOrder="sv2#area2#page13#enu9#ln42">
+    <EntryUnit id="sv2#area2#page13#enu9" name="Inserisci i dettagli" gr:x="0" gr:y="0" linkOrder="sv2#area2#page13#enu9#ln42">
       <Field id="sv2#area2#page13#enu9#fld24" name="Nome" type="string" modifiable="true"/>
       <Field id="sv2#area2#page13#enu9#fld25" name="Descrizione" type="string" modifiable="true"/>
       <Field id="sv2#area2#page13#enu9#fld26" name="Prezzo" type="decimal" modifiable="true"/>
@@ -12,7 +12,7 @@
         <LinkParameter id="sv2#area2#page13#enu9#ln42#par107" name="Quantita_quantita" source="sv2#area2#page13#enu9#fld27" target="sv2#area2#miu11.mov1#opm2#icu8#icp21"/>
       </Link>
     </EntryUnit>
-    <MultiMessageUnit gr:x="125" gr:y="50" id="sv2#area2#page13#mssu18" name="Messaggio"/>
+    <MultiMessageUnit gr:x="140" gr:y="60" id="sv2#area2#page13#mssu18" name="Messaggio"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

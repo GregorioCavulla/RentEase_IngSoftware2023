@@ -1,11 +1,11 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="200" gr:y="0" id="sv3#area4#page2" name="Home">
   <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#area4#page2#mssu10" name="Welcome" linkOrder="sv3#area4#page2#mssu10#ln13 sv3#area4#page2#mssu10#ln29">
+    <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#area4#page2#mssu10" name="Benvenuto" linkOrder="sv3#area4#page2#mssu10#ln13 sv3#area4#page2#mssu10#ln29">
       <Message xml:space="preserve">Nella lista sottostante sono presenti le informazioni degli account registrati nel sistema.</Message>
-      <Link id="sv3#area4#page2#mssu10#ln13" name="aggiungi un cliente" to="sv3#area4#page4" automaticCoupling="true" type="normal" validate="true"/>
-      <Link id="sv3#area4#page2#mssu10#ln29" name="visualizza richieste di cambio password" to="sv3#area4#page20" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv3#area4#page2#mssu10#ln13" name="Aggiungi un cliente" to="sv3#area4#page4" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv3#area4#page2#mssu10#ln29" name="Visualizza richieste di cambio password" to="sv3#area4#page20" automaticCoupling="true" type="normal" validate="true"/>
     </MultiMessageUnit>
-    <IndexUnit gr:x="295" gr:y="10" id="sv3#area4#page2#inu1" name="ListaClienti" entity="User" displayAttributes="User#att17 User#att23 userName email" linkOrder="sv3#area4#page2#inu1#ln73">
+    <IndexUnit gr:x="295" gr:y="10" id="sv3#area4#page2#inu1" name="Lista clienti" entity="User" displayAttributes="User#att17 User#att23 userName email" linkOrder="sv3#area4#page2#inu1#ln73">
       <Selector id="sv3#area4#page2#inu1#su10" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area4#page2#inu1#su10#rcond6" name="RoleCondition6" predicate="in" implied="false" role="DefaultGroup2User"/>
       </Selector>
@@ -25,9 +25,9 @@
         <LinkParameter id="sv3#area4#page2#seu5#ln8#par18" name="oid_RoleCondition6 [oid]" source="groupOIDArray" target="sv3#area4#page2#inu1#su10#rcond6.groupOID"/>
       </Link>
     </SelectorUnit>
-    <MultiMessageUnit gr:x="10" gr:y="125" id="sv3#area4#page2#mssu12" name="Messaggio Propr" linkOrder="sv3#area4#page2#mssu12#ln60">
+    <MultiMessageUnit gr:x="10" gr:y="125" id="sv3#area4#page2#mssu12" name="Messaggio" linkOrder="sv3#area4#page2#mssu12#ln60">
       <Message xml:space="preserve">Nella prossima lista &#232; possibile gestire gli account di tipo Proprietario</Message>
-      <Link id="sv3#area4#page2#mssu12#ln60" name="aggiungi un proprietario" to="sv3#area4#page19" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv3#area4#page2#mssu12#ln60" name="Aggiungi un proprietario" to="sv3#area4#page19" automaticCoupling="true" type="normal" validate="true"/>
     </MultiMessageUnit>
     <SelectorUnit id="sv3#area4#page2#seu6" name="Seleziona Clienti" gr:x="160" gr:y="115" entity="Group">
       <Selector id="sv3#area4#page2#seu6#su23" defaultPolicy="fill" booleanOperator="and">
@@ -37,7 +37,7 @@
         <LinkParameter id="sv3#area4#page2#seu6#ln11#par19" name="oid_RoleCondition6 [oid]" source="groupOIDArray" target="sv3#area4#page2#inu4#su26#rcond8.groupOID"/>
       </Link>
     </SelectorUnit>
-    <IndexUnit id="sv3#area4#page2#inu4" name="ListaProprietari" gr:x="350" gr:y="130" entity="User" displayAttributes="User#att17 User#att23 userName email">
+    <IndexUnit id="sv3#area4#page2#inu4" name="Lista proprietari" gr:x="350" gr:y="130" entity="User" displayAttributes="User#att17 User#att23 userName email">
       <Selector id="sv3#area4#page2#inu4#su26" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv3#area4#page2#inu4#su26#rcond8" name="RoleCondition6" predicate="in" implied="false" role="DefaultGroup2User"/>
       </Selector>

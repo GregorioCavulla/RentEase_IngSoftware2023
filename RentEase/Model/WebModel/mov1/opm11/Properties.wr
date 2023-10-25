@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm11" name="Add Product to Cart" gr:x="410" gr:y="41">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm11" name="Aggiungi al Carrello" gr:x="410" gr:y="41">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm11#icu5" gr:x="15" gr:y="255">
       <InputCollectorParameter id="mov1#opm11#icu5#icp8" name="quantit&#224;"/>

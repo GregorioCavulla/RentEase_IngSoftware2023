@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="355" gr:y="365" id="sv2#area2" name="Gestione Prodotti" landmark="true" defaultPage="sv2#area2#miu10">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="355" gr:y="365" id="sv2#area2" name="Gestione Prodotti" landmark="true" defaultPage="sv2#area2#page9">
   <OperationUnits>
     <ModuleInstanceUnit gr:x="350" gr:y="390" id="sv2#area2#miu10" action="true" moduleId="mov1#opm1">
       <OKLink id="sv2#area2#miu10#oln48" name="OKFlow48" to="sv2#area2#page12#mssu16">
@@ -12,7 +12,7 @@
       <OKLink id="sv2#area2#miu11#oln40" name="OKFlow40" to="sv2#area2#page14#dau4">
         <LinkParameter id="sv2#area2#miu11#oln40#par103" name="Output Port Parameter10_KeyCondition16 [oid]" source="mov1#opm2#okcu6#ocp10" target="sv2#area2#page14#dau4#su24#kcond16.ent4#att19"/>
       </OKLink>
-      <KOLink id="sv2#area2#miu11#kln26" name="KOFlow26" to="sv2#area2#page13#mssu18">
+      <KOLink id="sv2#area2#miu11#kln26" name="KOFlow26" to="sv2#area2#page13#mssu18" gr:bendpoints="-104,57,96,2">
         <LinkParameter id="sv2#area2#miu11#kln26#par149" name="Error message_Shown Messages" source="mov1#opm2#kocu7#ocp9" target="sv2#area2#page13#mssu18.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>

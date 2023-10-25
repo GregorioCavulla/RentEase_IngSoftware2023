@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="740" gr:y="30" id="sv3#area4#page18" name="Modifica dati utente">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="0" id="sv3#area4#page18#enu15" name="Dati" fieldOrder="sv3#area4#page18#enu15#fld39 sv3#area4#page18#enu15#fld42 sv3#area4#page18#enu15#fld40 sv3#area4#page18#enu15#fld41" linkOrder="sv3#area4#page18#enu15#ln74">
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#area4#page18#enu15" name="Dati utente" fieldOrder="sv3#area4#page18#enu15#fld39 sv3#area4#page18#enu15#fld42 sv3#area4#page18#enu15#fld40 sv3#area4#page18#enu15#fld41" linkOrder="sv3#area4#page18#enu15#ln74">
       <Field id="sv3#area4#page18#enu15#fld39" name="Nome" type="string" modifiable="true" preloaded="true"/>
       <Field id="sv3#area4#page18#enu15#fld40" name="username" type="string" modifiable="true" preloaded="true"/>
       <Field id="sv3#area4#page18#enu15#fld41" name="email" type="string" modifiable="true" preloaded="true"/>

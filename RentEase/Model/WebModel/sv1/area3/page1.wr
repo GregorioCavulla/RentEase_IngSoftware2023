@@ -1,8 +1,9 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area3#page1" name="Storico Ordini" gr:x="0" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area3#page1" name="Ordini attivi" gr:x="0" gr:y="0" linkOrder="sv1#area3#page1#ln67">
   <ContentUnits>
-    <IndexUnit id="sv1#area3#page1#inu2" name="Ordini" gr:x="0" gr:y="0" entity="ent6" displayAttributes="ent6#att30 ent6#att31 ent6#att32 ent6#att33" linkOrder="sv1#area3#page1#inu2#ln68">
+    <IndexUnit id="sv1#area3#page1#inu2" name="Ordini attivi" gr:x="0" gr:y="0" entity="ent6" displayAttributes="ent6#att26 ent6#att30 ent6#att31 ent6#att32 ent6#att33 ent6#att1" linkOrder="sv1#area3#page1#inu2#ln68">
       <Selector id="sv1#area3#page1#inu2#su1" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area3#page1#inu2#su1#rcond2" name="RoleCondition1" predicate="in" implied="false" role="rel4#role7"/>
+        <AttributesCondition id="sv1#area3#page1#inu2#su1#acond12" name="fine" predicate="gteq" booleanOperator="and" implied="false" attributes="ent6#att31"/>
       </Selector>
       <Link id="sv1#area3#page1#inu2#ln68" name="visualizza prodotti" to="sv1#area3#page1#inu5" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
@@ -16,16 +17,24 @@
         <RelationshipRoleCondition id="sv1#area3#page1#inu5#su8#rcond7" name="RoleCondition10" role="rel2#role4.rel3#role5" predicate="in" implied="false"/>
       </Selector>
     </IndexUnit>
+    <TimeUnit gr:x="215" gr:y="170" id="sv1#area3#page1#tmu1" name="Data">
+      <Link id="sv1#area3#page1#tmu1#ln50" name="Flow50" to="sv1#area3#page1#inu2" type="transport" validate="true">
+        <LinkParameter id="sv1#area3#page1#tmu1#ln50#par13" name="Current/Input Date_fine" source="currentDate" target="sv1#area3#page1#inu2#su1#acond12"/>
+        <LinkParameter id="sv1#area3#page1#tmu1#ln50#par27" name="Current/Input Date_inizio" source="currentDate" target="sv1#area3#page1#inu2#su1#acond11"/>
+      </Link>
+    </TimeUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area3#page1#inu2">
+          <layout:Link link="sv1#area3#page1#inu2#ln68"/>
+          <layout:Attribute attribute="ent6#att26"/>
           <layout:Attribute attribute="ent6#att30"/>
           <layout:Attribute attribute="ent6#att31"/>
           <layout:Attribute attribute="ent6#att32"/>
           <layout:Attribute attribute="ent6#att33"/>
-          <layout:Link link="sv1#area3#page1#inu2#ln68"/>
+          <layout:Attribute attribute="ent6#att1"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -89,4 +98,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv1#area3#page1#ln67" name="visualizza ordini conclusi" to="sv1#area3#page16" automaticCoupling="true" type="normal" validate="true"/>
 </Page>

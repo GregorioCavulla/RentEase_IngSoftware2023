@@ -6,7 +6,7 @@
       </KOLink>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit id="sv3#miu8" gr:x="1225" gr:y="290" action="true" moduleId="mov1#opm9"/>
-    <ModuleInstanceUnit gr:x="220" gr:y="555" id="sv3#miu9" action="true" moduleId="mov1#opm8">
+    <ModuleInstanceUnit gr:x="150" gr:y="555" id="sv3#miu9" action="true" moduleId="mov1#opm8">
       <OKLink id="sv3#miu9#oln31" name="OKFlow30" to="sv3#area4#page4#mssu14">
         <LinkParameter id="sv3#miu9#oln31#par118" name="Account aggiunto con successo!_Shown Messages" target="sv3#area4#page4#mssu14.shownMessages" sourceValue="Account aggiunto con successo!"/>
       </OKLink>
@@ -25,7 +25,7 @@
         <LinkParameter id="sv3#miu18#oln36#par150" name="success message_Shown Messages" source="mov1#opm6#okcu10#ocp12" target="sv3#area4#page20#mssu19.shownMessages"/>
         <LinkParameter id="sv3#miu18#oln36#par152" name="false_var5" sourceValue="false" targetVariable="sv3#area4#page20#var5"/>
       </OKLink>
-      <KOLink id="sv3#miu18#kln27" name="KOFlow27" to="sv3#area4#page20#mssu19" gr:bendpoints="-227,202,243,-8">
+      <KOLink id="sv3#miu18#kln27" name="KOFlow27" to="sv3#area4#page20#mssu19" gr:bendpoints="57,-70,47,96">
         <LinkParameter id="sv3#miu18#kln27#par151" name="error message_Shown Messages" source="mov1#opm6#kocu11#ocp13" target="sv3#area4#page20#mssu19.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>

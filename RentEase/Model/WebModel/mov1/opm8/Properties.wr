@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm8" name="Register" gr:x="110" gr:y="161">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm8" name="Registrazione Cliente" gr:x="110" gr:y="161">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm8#icu2" gr:x="35" gr:y="200" linkOrder="mov1#opm8#icu2#ln4">
       <InputCollectorParameter id="mov1#opm8#icu2#icp2" name="password"/>

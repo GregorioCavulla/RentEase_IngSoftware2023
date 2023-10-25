@@ -7,7 +7,7 @@
       <Link id="sv3#area4#page20#inu6#ln31" name="modifica password" to="sv3#area4#page20#enu14" type="normal" validate="true">
         <LinkParameter id="sv3#area4#page20#inu6#ln31#par126" name="true_var5" sourceValue="true" targetVariable="sv3#area4#page20#var5"/>
       </Link>
-      <Link id="sv3#area4#page20#inu6#ln70" name="Flow70" to="sv3#miu18" type="transport" validate="true">
+      <Link id="sv3#area4#page20#inu6#ln70" name="Flow70" to="sv3#miu18" type="transport" validate="true" gr:bendpoints="-7,193,-71,-73">
         <LinkParameter id="sv3#area4#page20#inu6#ln70#par119" name="oid_oid" source="data[].userOID" target="sv3#miu18.mov1#opm6#icu12#icp28"/>
       </Link>
     </IndexUnit>
@@ -19,12 +19,12 @@
         </VRules>
       </Field>
       <VRules/>
-      <Link id="sv3#area4#page20#enu14#ln33" name="Flow33" to="sv3#miu18" type="normal" validate="true">
+      <Link id="sv3#area4#page20#enu14#ln33" name="conferma" to="sv3#miu18" type="normal" validate="true" gr:bendpoints="-3,186,107,-74">
         <LinkParameter id="sv3#area4#page20#enu14#ln33#par117" name="password_password" source="sv3#area4#page20#enu14#fld37" target="sv3#miu18.mov1#opm6#icu12#icp29"/>
       </Link>
     </EntryUnit>
     <MultiMessageUnit gr:x="90" gr:y="115" id="sv3#area4#page20#mssu19" name="Message" linkOrder="sv3#area4#page20#mssu19#ln72">
-      <Link id="sv3#area4#page20#mssu19#ln72" name="torna alla schermata principale" to="sv3#area4#page2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv3#area4#page20#mssu19#ln72" name="Torna alla schermata principale" to="sv3#area4#page2" automaticCoupling="true" type="normal" validate="true"/>
     </MultiMessageUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">

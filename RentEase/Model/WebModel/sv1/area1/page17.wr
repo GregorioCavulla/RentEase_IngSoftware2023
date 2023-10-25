@@ -1,11 +1,11 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page17" name="Scegli Prodotti" gr:x="165" gr:y="315">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page17" name="Scegli Prodotti" gr:x="165" gr:y="340">
   <ContentUnits>
     <IndexUnit id="sv1#area1#page17#inu9" name="Risultati" gr:x="0" gr:y="130" entity="ent4" displayAttributes="ent4#att20 ent4#att24" linkOrder="sv1#area1#page17#inu9#ln52">
       <Selector id="sv1#area1#page17#inu9#su27" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area1#page17#inu9#su27#acond5" name="DateCondition" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att19" ignoreCase="true"/>
         <AttributesCondition id="sv1#area1#page17#inu9#su27#acond6" name="SearchCondition" predicate="contains" booleanOperator="or" implied="true" attributes="ent4#att20" ignoreCase="true"/>
       </Selector>
-      <Link id="sv1#area1#page17#inu9#ln52" name="aggiungi al carrello" to="sv1#area1#page6#dau9" type="normal" validate="true">
+      <Link id="sv1#area1#page17#inu9#ln52" name="Aggiungi al carrello" to="sv1#area1#page6#dau9" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page17#inu9#ln52#par38" name="oid_KeyCondition1 [oid]" source="data[].ent4#att19" target="sv1#area1#page6#dau9#su19#kcond12.ent4#att19"/>
       </Link>
     </IndexUnit>
@@ -15,7 +15,7 @@
         <LinkParameter id="sv1#area1#page17#enu10#ln58#par135" name="query_SearchCondition" source="sv1#area1#page17#enu10#fld13" target="sv1#area1#page17#inu9#su27#acond6"/>
       </Link>
     </EntryUnit>
-    <QueryUnit id="sv1#area1#page17#qu6" name="QueryProdottiDisp" gr:x="0" gr:y="0" mode="select" language="SQL" db="db1">
+    <QueryUnit id="sv1#area1#page17#qu6" name="Disponibilit&#224; Effettiva" gr:x="0" gr:y="0" mode="select" language="SQL" db="db1">
       <QueryText xml:space="preserve">SELECT p1.ID, p1.QUANTITA - COALESCE(prenotazioni.QUANTITA_PRENOTATA, 0) AS QUANTITA_DISPONIBILE
 FROM PRODOTTO p1
 LEFT JOIN (
@@ -37,7 +37,7 @@ ORDER BY p1.ID;</QueryText>
       </Link>
       <QueryOutput id="sv1#area1#page17#qu6#qo8" name="dispEffettiva" type="integer"/>
     </QueryUnit>
-    <MultiMessageUnit id="sv1#area1#page17#mssu5" name="Message" gr:x="195" gr:y="25">
+    <MultiMessageUnit id="sv1#area1#page17#mssu5" name="Suggerimento" gr:x="185" gr:y="20">
       <Message xml:space="preserve">Puoi eseguire una ricerca inserendo una parola chiave nel form sottostante</Message>
     </MultiMessageUnit>
   </ContentUnits>

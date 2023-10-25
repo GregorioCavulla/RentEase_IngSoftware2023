@@ -1,0 +1,102 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area3#page16" name="Storico Ordini" gr:x="0" gr:y="320" linkOrder="sv1#area3#page16#ln69">
+  <ContentUnits>
+    <IndexUnit id="sv1#area3#page16#inu10" name="Ordini precedenti" linkOrder="sv1#area3#page16#inu10#ln53" gr:x="0" gr:y="0" entity="ent6" displayAttributes="ent6#att26 ent6#att30 ent6#att31 ent6#att32 ent6#att33 ent6#att1">
+      <Selector id="sv1#area3#page16#inu10#su12" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area3#page16#inu10#su12#rcond1" name="RoleCondition1" predicate="in" implied="false" role="rel4#role7"/>
+        <AttributesCondition id="sv1#area3#page16#inu10#su12#acond14" name="fine" predicate="lt" booleanOperator="or" implied="false" attributes="ent6#att31"/>
+      </Selector>
+      <Link id="sv1#area3#page16#inu10#ln53" name="visualizza prodotti" to="sv1#area3#page16#inu12" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+    <GetUnit id="sv1#area3#page16#gtu2" name="getUsrCtx" gr:x="0" gr:y="155" contextParameters="UserCtxParam">
+      <Link id="sv1#area3#page16#gtu2#ln56" name="Flow1" to="sv1#area3#page16#inu10" type="transport" validate="true">
+        <LinkParameter id="sv1#area3#page16#gtu2#ln56#par108" name="UserCtxParam.oid_RoleCondition1 [oid]" source="sv1#area3#page16#gtu2.UserCtxParam" target="sv1#area3#page16#inu10#su12#rcond1.userOID"/>
+      </Link>
+    </GetUnit>
+    <IndexUnit id="sv1#area3#page16#inu12" name="Prodotto" gr:x="155" gr:y="0" entity="ent4" displayAttributes="ent4#att20 ent4#att21 ent4#att24">
+      <Selector id="sv1#area3#page16#inu12#su13" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area3#page16#inu12#su13#rcond3" name="RoleCondition10" role="rel2#role4.rel3#role5" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+    <TimeUnit id="sv1#area3#page16#tmu2" name="getDate" gr:x="215" gr:y="170">
+      <Link id="sv1#area3#page16#tmu2#ln57" name="Flow50" to="sv1#area3#page16#inu10" type="transport" validate="true">
+        <LinkParameter id="sv1#area3#page16#tmu2#ln57#par109" name="Current/Input Date_fine" source="currentDate" target="sv1#area3#page16#inu10#su12#acond14"/>
+        <LinkParameter id="sv1#area3#page16#tmu2#ln57#par110" name="Current/Input Date_inizio" source="currentDate" target="sv1#area3#page16#inu10#su12#acond13"/>
+      </Link>
+    </TimeUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area3#page16#inu10">
+          <layout:Link link="sv1#area3#page16#inu10#ln53"/>
+          <layout:Attribute attribute="ent6#att26"/>
+          <layout:Attribute attribute="ent6#att30"/>
+          <layout:Attribute attribute="ent6#att31"/>
+          <layout:Attribute attribute="ent6#att32"/>
+          <layout:Attribute attribute="ent6#att33"/>
+          <layout:Attribute attribute="ent6#att1"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv1#area3#page16#inu12">
+          <layout:Attribute attribute="ent4#att20"/>
+          <layout:Attribute attribute="ent4#att21"/>
+          <layout:Attribute attribute="ent4#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv1#area3#page16#ln69" name="visualizza ordini attivi" to="sv1#area3#page1" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="15,-161,15,159"/>
+</Page>

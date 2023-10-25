@@ -1,21 +1,24 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="35" gr:y="205" id="sv2#area2#page12" name="modifica dettagli">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="35" gr:y="205" id="sv2#area2#page12" name="Modifica dettagli">
   <ContentUnits>
-    <EntryUnit gr:x="0" gr:y="110" id="sv2#area2#page12#enu8" name="Nuovi Dettagli" linkOrder="sv2#area2#page12#enu8#ln35 sv2#area2#page12#enu8#ln40">
+    <EntryUnit gr:x="0" gr:y="130" id="sv2#area2#page12#enu8" name="Nuovi Dettagli" linkOrder="sv2#area2#page12#enu8#ln35">
       <Field id="sv2#area2#page12#enu8#fld19" name="Nome" type="string" modifiable="true"/>
       <Field id="sv2#area2#page12#enu8#fld20" name="Descrizione" type="string" modifiable="true"/>
       <Field id="sv2#area2#page12#enu8#fld21" name="Prezzo" type="decimal" modifiable="true"/>
-      <Field id="sv2#area2#page12#enu8#fld22" name="Quantita" type="integer" modifiable="true"/>
-      <Link id="sv2#area2#page12#enu8#ln35" name="modifica" to="sv2#area2#miu10" type="normal" validate="true" gr:bendpoints="78,121,-297,76;381,124,6,79">
+      <Field id="sv2#area2#page12#enu8#fld22" name="Quantita" type="integer" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="sv2#area2#page12#enu8#fld22#cmp6" name="Compare6" predicate="gteq" value="0"/>
+        </VRules>
+      </Field>
+      <Link id="sv2#area2#page12#enu8#ln35" name="modifica" to="sv2#area2#miu10" type="normal" validate="true" gr:bendpoints="2,100,-343,76;342,101,-3,77">
         <LinkParameter id="sv2#area2#page12#enu8#ln35#par69" name="Descrizione_descrizione" source="sv2#area2#page12#enu8#fld20" target="sv2#area2#miu10.mov1#opm1#icu7#icp7"/>
         <LinkParameter id="sv2#area2#page12#enu8#ln35#par70" name="Nome_nome" source="sv2#area2#page12#enu8#fld19" target="sv2#area2#miu10.mov1#opm1#icu7#icp6"/>
         <LinkParameter id="sv2#area2#page12#enu8#ln35#par75" name="Prezzo_prezzo" source="sv2#area2#page12#enu8#fld21" target="sv2#area2#miu10.mov1#opm1#icu7#icp10"/>
         <LinkParameter id="sv2#area2#page12#enu8#ln35#par76" name="Quantita_quantita" source="sv2#area2#page12#enu8#fld22" target="sv2#area2#miu10.mov1#opm1#icu7#icp13"/>
         <LinkParameter id="sv2#area2#page12#enu8#ln35#par95" name="id_oid" source="sv2#area2#page12#enu8#fld23" target="sv2#area2#miu10.mov1#opm1#icu7#icp17"/>
       </Link>
-      <Link id="sv2#area2#page12#enu8#ln40" name="Flow40" to="sv2#area2" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-197,-20,-421,144"/>
       <Field id="sv2#area2#page12#enu8#fld23" name="id" type="integer" modifiable="false" preloaded="true" hidden="true"/>
     </EntryUnit>
-    <DataUnit gr:x="140" gr:y="0" id="sv2#area2#page12#dau3" name="DettagliAttuali" entity="ent4" displayAttributes="ent4#att20 ent4#att21 ent4#att22 ent4#att24">
+    <DataUnit gr:x="115" gr:y="0" id="sv2#area2#page12#dau3" name="Prodotto selezionato" entity="ent4" displayAttributes="ent4#att20 ent4#att21 ent4#att22 ent4#att24">
       <Selector id="sv2#area2#page12#dau3#su5" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area2#page12#dau3#su5#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
@@ -32,7 +35,6 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#area2#page12#enu8">
           <layout:Link link="sv2#area2#page12#enu8#ln35"/>
-          <layout:Link link="sv2#area2#page12#enu8#ln40"/>
           <layout:Field field="sv2#area2#page12#enu8#fld19"/>
           <layout:Field field="sv2#area2#page12#enu8#fld20"/>
           <layout:Field field="sv2#area2#page12#enu8#fld21"/>

@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm15" name="Init Cart" gr:x="470" gr:y="317">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm15" name="Inizializza Carrello" gr:x="410" gr:y="170">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm15#icu15" gr:x="15" gr:y="255" linkOrder="mov1#opm15#icu15#ln85">
       <OKLink id="mov1#opm15#icu15#oln56" name="OKFlow7" to="mov1#opm15#opg5#seu8" automaticCoupling="true"/>

@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="20" id="sv3#area4#page4" name="Aggiungi Cliente">
   <ContentUnits>
-    <EntryUnit id="sv3#area4#page4#enu5" name="Register Form" gr:x="0" gr:y="0" fieldOrder="sv3#area4#page4#enu5#fld28 sv3#area4#page4#enu5#fld29 sv3#area4#page4#enu5#fld16 sv3#area4#page4#enu5#fld15 sv3#area4#page4#enu5#fld14" linkOrder="sv3#area4#page4#enu5#ln28">
+    <EntryUnit id="sv3#area4#page4#enu5" name="Dettagli cliente" gr:x="0" gr:y="0" fieldOrder="sv3#area4#page4#enu5#fld28 sv3#area4#page4#enu5#fld29 sv3#area4#page4#enu5#fld16 sv3#area4#page4#enu5#fld15 sv3#area4#page4#enu5#fld14" linkOrder="sv3#area4#page4#enu5#ln28">
       <Field id="sv3#area4#page4#enu5#fld14" name="password" type="password" modifiable="true"/>
       <Field id="sv3#area4#page4#enu5#fld15" name="username" type="string" modifiable="true"/>
       <Field id="sv3#area4#page4#enu5#fld16" name="email" type="string" modifiable="true"/>

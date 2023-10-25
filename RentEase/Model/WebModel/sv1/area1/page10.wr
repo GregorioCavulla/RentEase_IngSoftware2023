@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page10" name="Cart" gr:x="450" gr:y="5">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page10" name="Cart" gr:x="480" gr:y="30">
   <ContentUnits>
-    <IndexUnit id="sv1#area1#page10#inu7" name="CartItem List" linkOrder="sv1#area1#page10#inu7#ln45" gr:x="200" gr:y="10" entity="pkg1#ent2" displayAttributes="pkg1#ent2#att12 pkg1#ent2#att13 pkg1#ent2#att14 pkg1#ent2#att15 pkg1#ent2#att5 pkg1#ent2#att6">
+    <IndexUnit id="sv1#area1#page10#inu7" name="Prodotti nel carrello" linkOrder="sv1#area1#page10#inu7#ln45" gr:x="200" gr:y="10" entity="pkg1#ent2" displayAttributes="pkg1#ent2#att12 pkg1#ent2#att14 pkg1#ent2#att13 pkg1#ent2#att15 pkg1#ent2#att5">
       <Link id="sv1#area1#page10#inu7#ln45" name="delete" to="sv1#area1#miu14" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page10#inu7#ln45#par33" name="oid_id_CartItem" source="data[].pkg1#ent2#att5" target="sv1#area1#miu14.mov1#opm7#icu1#icp1"/>
       </Link>
@@ -8,25 +8,28 @@
         <LinkParameter id="sv1#area1#page10#inu7#ln46#par34" name="oid_RoleCondition2 [oid]" source="data[].pkg1#ent2#att5" target="sv1#area1#page10#dau10#su20#rcond9.pkg1#ent2#att5"/>
       </Link>
     </IndexUnit>
-    <MultiMessageUnit id="sv1#area1#page10#mssu3" name="Message" gr:x="420" gr:y="20">
-      <Message xml:space="preserve">Your Cart</Message>
-    </MultiMessageUnit>
-    <DataUnit id="sv1#area1#page10#dau10" name="Cart Details" linkOrder="sv1#area1#page10#dau10#ln87 sv1#area1#page10#dau10#ln89" gr:x="0" gr:y="0" entity="pkg1#ent1" displayAttributes="pkg1#ent1#att16 pkg1#ent1#att18 pkg1#ent1#att4">
+    <MultiMessageUnit id="sv1#area1#page10#mssu3" name="Messaggio" gr:x="470" gr:y="25"/>
+    <DataUnit id="sv1#area1#page10#dau10" name="Il tuo carrello" linkOrder="sv1#area1#page10#dau10#ln87 sv1#area1#page10#dau10#ln89" gr:x="0" gr:y="0" entity="pkg1#ent1" displayAttributes="pkg1#ent1#att16 pkg1#ent1#att18 pkg1#ent1#att4">
       <Selector id="sv1#area1#page10#dau10#su20" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area1#page10#dau10#su20#rcond9" name="RoleCondition2" role="rel1#role1" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv1#area1#page10#dau10#ln87" name="aggiungi altri prodotti al carrello" to="sv1#area1#page17#qu6" type="normal" validate="true" gr:bendpoints="-52,185,193,-140">
+      <Link id="sv1#area1#page10#dau10#ln87" name="Aggiungi altri prodotti al carrello" to="sv1#area1#page17#qu6" type="normal" validate="true" gr:bendpoints="-52,185,193,-140">
         <LinkParameter id="sv1#area1#page10#dau10#ln87#par215" name="fineNoleggio_fineData" source="data.pkg1#ent1#att18" target="sv1#area1#page17#qu6.sv1#area1#page17#qu6#qi7"/>
         <LinkParameter id="sv1#area1#page10#dau10#ln87#par216" name="inizioNoleggio_inizioData" source="data.pkg1#ent1#att16" target="sv1#area1#page17#qu6.sv1#area1#page17#qu6#qi6"/>
       </Link>
-      <Link id="sv1#area1#page10#dau10#ln89" name="concludi ordine" to="sv1#area1#miu17" type="normal" validate="true" gr:bendpoints="-1,181,-186,-114">
+      <Link id="sv1#area1#page10#dau10#ln89" name="Concludi l'ordine" to="sv1#area1#miu17" type="normal" validate="true" gr:bendpoints="-1,181,-186,-114">
         <LinkParameter id="sv1#area1#page10#dau10#ln89#par199" name="fineNoleggio_fineData" source="data.pkg1#ent1#att18" target="sv1#area1#miu17.mov1#opm16#icu16#icp42"/>
         <LinkParameter id="sv1#area1#page10#dau10#ln89#par200" name="oid_id_cart" source="data.pkg1#ent1#att3" target="sv1#area1#miu17.mov1#opm16#icu16#icp27"/>
         <LinkParameter id="sv1#area1#page10#dau10#ln89#par217" name="inizioNoleggio_inizioData" source="data.pkg1#ent1#att16" target="sv1#area1#miu17.mov1#opm16#icu16#icp37"/>
         <LinkParameter id="sv1#area1#page10#dau10#ln89#par218" name="totale_prezzo_totale" source="data.pkg1#ent1#att4" target="sv1#area1#miu17.mov1#opm16#icu16#icp45"/>
       </Link>
     </DataUnit>
-    <MultiMessageUnit gr:x="310" gr:y="5" id="sv1#area1#page10#mssu21" name="Esito Ordine"/>
+    <MultiMessageUnit gr:x="350" gr:y="10" id="sv1#area1#page10#mssu21" name="Esito Ordine"/>
+    <TimeUnit gr:x="120" gr:y="80" id="sv1#area1#page10#tmu6" name="Data">
+      <Link id="sv1#area1#page10#tmu6#ln94" name="Flow94" to="sv1#area1#miu17" type="transport" validate="true" gr:bendpoints="-63,106,-143,-124">
+        <LinkParameter id="sv1#area1#page10#tmu6#ln94#par177" name="Current/Input Date_dataOrdine" source="currentDate" target="sv1#area1#miu17.mov1#opm16#icu16#icp5"/>
+      </Link>
+    </TimeUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -50,11 +53,10 @@
         <layout:Unit unitId="sv1#area1#page10#inu7">
           <layout:Link link="sv1#area1#page10#inu7#ln45"/>
           <layout:Attribute attribute="pkg1#ent2#att12"/>
-          <layout:Attribute attribute="pkg1#ent2#att13"/>
           <layout:Attribute attribute="pkg1#ent2#att14"/>
+          <layout:Attribute attribute="pkg1#ent2#att13"/>
           <layout:Attribute attribute="pkg1#ent2#att15"/>
           <layout:Attribute attribute="pkg1#ent2#att5"/>
-          <layout:Attribute attribute="pkg1#ent2#att6"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -95,6 +97,20 @@
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv1#area1#page10#mssu21"/>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

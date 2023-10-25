@@ -5,7 +5,7 @@
         <LinkParameter id="sv2#area2#page11#inu3#ln15#par62" name="oid_KeyCondition2 [oid]" source="data[].ent4#att19" target="sv2#area2#page11#dau2#su4#kcond2.ent4#att19"/>
       </Link>
       <Link id="sv2#area2#page11#inu3#ln34" name="modifica" to="sv2#area2#page12#dau3" automaticCoupling="true" type="normal" validate="true"/>
-      <Link id="sv2#area2#page11#inu3#ln36" name="rimuovi" to="sv2#area2#page3#dau8" type="normal" validate="true">
+      <Link id="sv2#area2#page11#inu3#ln36" name="rimuovi" to="sv2#area2#page3#dau8" type="normal" validate="true" gr:bendpoints="152,212,-318,2">
         <LinkParameter id="sv2#area2#page11#inu3#ln36#par44" name="oid_KeyCondition11 [oid]" source="data[].ent4#att19" target="sv2#area2#page3#dau8#su17#kcond11.ent4#att19"/>
       </Link>
     </IndexUnit>

@@ -1,29 +1,16 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page5" name="Prodotti" gr:x="0" gr:y="0" protected="false">
   <ContentUnits>
-    <MultiMessageUnit id="sv1#area1#page5#mssu7" name="Welcome" gr:x="0" gr:y="45" linkOrder="sv1#area1#page5#mssu7#ln12 sv1#area1#page5#mssu7#ln7">
-      <Message xml:space="preserve">Benvenuto in RentEase!</Message>
-      <Link id="sv1#area1#page5#mssu7#ln12" name="Cerca Prodotti" to="sv1#area1#page7" automaticCoupling="true" type="normal" validate="true"/>
-      <Link id="sv1#area1#page5#mssu7#ln7" name="visualizza Storico Ordini" to="sv1#area3#page1" type="normal" automaticCoupling="true" validate="true"/>
+    <MultiMessageUnit id="sv1#area1#page5#mssu7" name="Menu" gr:x="0" gr:y="65" linkOrder="sv1#area1#page5#mssu7#ln12 sv1#area1#page5#mssu7#ln7">
+      <Message xml:space="preserve">Scegli un'opzione</Message>
+      <Link id="sv1#area1#page5#mssu7#ln12" name="Cerca prodotti" to="sv1#area1#page7" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area1#page5#mssu7#ln7" name="Visualizza storico ordini" to="sv1#area3#page1" type="normal" automaticCoupling="true" validate="true"/>
     </MultiMessageUnit>
+    <GetUnit gr:x="75" gr:y="0" id="sv1#area1#page5#gtu7" name="getUsrCtx" contextParameters="UserCtxParam"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
-      <layout:Cell colspan="12"/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv1#area1#page5#mssu7">
+        <layout:Unit unitId="sv1#area1#page5#mssu7" layout:unitVisibilityCondition="sv1#area1#page5#cexpr4">
           <layout:Link link="sv1#area1#page5#mssu7#ln12"/>
           <layout:Link link="sv1#area1#page5#mssu7#ln7"/>
         </layout:Unit>
@@ -166,5 +153,23 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
+  <Variable id="sv1#area1#page5#var10" name="UsrCtx" unitId="sv1#area1#page5#gtu7" parameter="sv1#area1#page5#gtu7.UserCtxParam"/>
+  <ConditionExpression id="sv1#area1#page5#cexpr4" name="ActivationExpression 4">
+    <TextValue xml:space="preserve">UsrCtx&gt;'0'</TextValue>
+  </ConditionExpression>
 </Page>

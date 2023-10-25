@@ -1,6 +1,6 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="780" gr:y="345" id="mov1#opm16" name="Concludi Ordine">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="415" gr:y="315" id="mov1#opm16" name="Concludi Ordine">
   <OperationUnits>
-    <InputCollectorUnit id="mov1#opm16#icu16" gr:x="30" gr:y="60" linkOrder="mov1#opm16#icu16#ln19 mov1#opm16#icu16#ln20 mov1#opm16#icu16#ln21">
+    <InputCollectorUnit id="mov1#opm16#icu16" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm16#icu16#icp42" name="fineData"/>
       <InputCollectorParameter id="mov1#opm16#icu16#icp37" name="inizioData"/>
       <InputCollectorParameter id="mov1#opm16#icu16#icp27" name="id_cart"/>
@@ -10,6 +10,7 @@
         <LinkParameter id="mov1#opm16#icu16#oln80#par193" name="inizioData_inizioNoleggio" source="mov1#opm16#icu16#icp37" target="mov1#opm16#cru14.ent6#att30"/>
         <LinkParameter id="mov1#opm16#icu16#oln80#par194" name="prezzo_totale_prezzo_totale" source="mov1#opm16#icu16#icp45" target="mov1#opm16#cru14.ent6#att1"/>
         <LinkParameter id="mov1#opm16#icu16#oln80#par221" name="RICHIESTO_Stato" sourceValue="RICHIESTO" target="mov1#opm16#cru14.ent6#att33"/>
+        <LinkParameter id="mov1#opm16#icu16#oln80#par176" name="dataOrdine_dataOrdine" source="mov1#opm16#icu16#icp5" target="mov1#opm16#cru14.ent6#att26"/>
       </OKLink>
       <Link id="mov1#opm16#icu16#ln19" name="Flow19" to="mov1#opm16#dlu4" type="transport" validate="true" gr:bendpoints="386,-22,-484,-102;690,-21,-180,-101">
         <LinkParameter id="mov1#opm16#icu16#ln19#par41" name="id_cart_RoleConditionCartToCartItem [oid]" source="mov1#opm16#icu16#icp27" target="mov1#opm16#dlu4#su39#rcond5.pkg1#ent1#att3"/>
@@ -20,6 +21,7 @@
       <Link id="mov1#opm16#icu16#ln21" name="Flow21" to="mov1#opm16#seu9" type="transport" validate="true" gr:bendpoints="243,172,-401,92;535,174,-109,94">
         <LinkParameter id="mov1#opm16#icu16#ln21#par50" name="id_cart_RoleConditionCartToCartItem [oid]" source="mov1#opm16#icu16#icp27" target="mov1#opm16#seu9#su38#rcond4.pkg1#ent1#att3"/>
       </Link>
+      <InputCollectorParameter id="mov1#opm16#icu16#icp5" name="dataOrdine"/>
     </InputCollectorUnit>
     <OKCollectorUnit gr:x="1285" gr:y="85" id="mov1#opm16#okcu14" name="OK Port14">
       <OutputCollectorParameter id="mov1#opm16#okcu14#ocp28" name="success message" value="Ordine effettuato correttamente!"/>
@@ -38,11 +40,6 @@
         <LinkParameter id="mov1#opm16#gtu9#ln88#par51" name="UserCtxParam.oid_User.oid(OrdineToUser)" source="mov1#opm16#gtu9.UserCtxParam" target="mov1#opm16#cru14.rel4#role8.userOID"/>
       </Link>
     </GetUnit>
-    <TimeUnit gr:x="325" gr:y="25" id="mov1#opm16#tmu3" name="GetDate" linkOrder="mov1#opm16#tmu3#ln90">
-      <Link id="mov1#opm16#tmu3#ln90" name="Flow90" to="mov1#opm16#cru14" type="transport" validate="true">
-        <LinkParameter id="mov1#opm16#tmu3#ln90#par222" name="Current/Input Date_dataOrdine" source="currentDate" target="mov1#opm16#cru14.ent6#att26"/>
-      </Link>
-    </TimeUnit>
     <SelectorUnit id="mov1#opm16#seu9" name="Selector All CartItems" gr:x="475" gr:y="150" entity="pkg1#ent2">
       <Selector id="mov1#opm16#seu9#su38" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#opm16#seu9#su38#rcond4" name="RoleConditionCartToCartItem" predicate="in" implied="false" role="rel1#role2"/>

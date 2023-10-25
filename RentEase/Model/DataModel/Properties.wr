@@ -1,7 +1,7 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
   <Entity id="User" name="User" duration="persistent" gr:x="660" gr:y="295" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att17 User#att23 User#att7" db:database="db1" db:schema="A0971235" db:table="USER">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="ID" db:idGenerator="identity"/>
-    <Attribute name="userName" id="userName" type="string" db:column="USERNAME"/>
+    <Attribute name="username" id="userName" type="string" db:column="USERNAME"/>
     <Attribute name="password" id="password" type="password" db:column="PASSWORD"/>
     <Attribute name="email" id="email" type="string" db:column="EMAIL"/>
     <Attribute id="User#att17" name="Nome" type="string" db:column="NOME"/>
@@ -54,16 +54,16 @@
     <Attribute id="ent4#att20" name="Nome" type="string" db:column="NOME"/>
     <Attribute id="ent4#att21" name="Descrizione" type="string" db:column="DESCRIZIONE"/>
     <Attribute id="ent4#att22" name="Quantita" type="integer" db:column="QUANTITA"/>
-    <Attribute id="ent4#att24" name="Prezzo" type="decimal" db:column="PREZZO"/>
+    <Attribute id="ent4#att24" name="Prezzo" type="float" db:column="PREZZO" subType="sbt1"/>
   </Entity>
   <Entity gr:x="655" gr:y="50" id="ent6" name="Ordine" duration="persistent" attributeOrder="ent6#att29 ent6#att30 ent6#att31 ent6#att32 ent6#att33 ent6#att1 ent6#att26" db:database="db1" db:schema="A0971235" db:table="ORDINE">
     <Attribute id="ent6#att29" key="true" name="oid" type="integer" db:column="ID" db:idGenerator="identity"/>
-    <Attribute id="ent6#att30" name="inizioNoleggio" type="date" db:column="INIZIONOLEGGIO"/>
-    <Attribute id="ent6#att31" name="fineNoleggio" type="date" db:column="FINENOLEGGIO"/>
-    <Attribute id="ent6#att32" name="dataRitiro" type="date" db:column="DATARITIRO"/>
+    <Attribute id="ent6#att30" name="Inizio Noleggio" type="date" db:column="INIZIONOLEGGIO"/>
+    <Attribute id="ent6#att31" name="Fine Noleggio" type="date" db:column="FINENOLEGGIO"/>
+    <Attribute id="ent6#att32" name="Data di Ritiro" type="date" db:column="DATARITIRO"/>
     <Attribute id="ent6#att33" name="Stato" type="string" db:column="STATO"/>
-    <Attribute id="ent6#att1" name="prezzo_totale" type="decimal" db:column="PREZZO_TOTALE"/>
-    <Attribute id="ent6#att26" name="dataOrdine" type="date" db:column="DATAORDINE"/>
+    <Attribute id="ent6#att1" name="Prezzo Totale" type="float" db:column="PREZZO_TOTALE" subType="sbt1"/>
+    <Attribute id="ent6#att26" name="Data Ordine" type="date" db:column="DATAORDINE"/>
   </Entity>
   <db:Database id="db1" name="TW_STUD" type="DB2 Universal Driver" url="jdbc:db2://diva.deis.unibo.it:50000/TW_STUD" cryptedPassword="true" username="A0971235" password="Q2FsdGFuaXNzZXR0NA=="/>
   <Entity gr:x="445" gr:y="100" id="ent9" name="LineaOrdine" duration="persistent" attributeOrder="ent9#att38 ent9#att2" db:database="db1" db:schema="A0971235" db:table="LINEA_ORDINE">
@@ -97,17 +97,17 @@
   <Package id="pkg1" name="Cart" gr:x="215" gr:y="500">
     <Entity id="pkg1#ent1" name="Cart" duration="volatile" attributeOrder="pkg1#ent1#att3 pkg1#ent1#att4 pkg1#ent1#att16 pkg1#ent1#att18 pkg1#ent1#att25" volatileStorage="database" gr:x="0" gr:y="0">
       <Attribute id="pkg1#ent1#att3" name="oid" key="true" type="integer"/>
-      <Attribute id="pkg1#ent1#att4" name="totale" type="float" derivationQuery="calculated::sum(Self.rel1#role2(as Var1).pkg1#ent2#att15)"/>
-      <Attribute id="pkg1#ent1#att16" name="inizioNoleggio" type="date"/>
-      <Attribute id="pkg1#ent1#att18" name="fineNoleggio" type="date"/>
-      <Attribute id="pkg1#ent1#att25" name="dataRitiro" type="date"/>
+      <Attribute id="pkg1#ent1#att4" name="Prezzo totale" type="float" derivationQuery="calculated::sum(Self.rel1#role2(as Var1).pkg1#ent2#att15)" subType="sbt1"/>
+      <Attribute id="pkg1#ent1#att16" name="Inizio Noleggio" type="date"/>
+      <Attribute id="pkg1#ent1#att18" name="Fine Noleggio" type="date"/>
+      <Attribute id="pkg1#ent1#att25" name="Data di Ritiro" type="date"/>
     </Entity>
     <Entity id="pkg1#ent2" name="CartItem" duration="volatile" attributeOrder="pkg1#ent2#att5 pkg1#ent2#att12 pkg1#ent2#att13 pkg1#ent2#att14 pkg1#ent2#att15 pkg1#ent2#att6" volatileStorage="database" gr:x="265" gr:y="0">
       <Attribute id="pkg1#ent2#att5" name="oid" key="true" type="integer"/>
       <Attribute id="pkg1#ent2#att12" name="Nome" type="string"/>
-      <Attribute id="pkg1#ent2#att13" name="quantita" type="integer"/>
-      <Attribute id="pkg1#ent2#att14" name="prezzo_unitario" type="float"/>
-      <Attribute id="pkg1#ent2#att15" name="prezzo_parziale" type="float" derivationQuery="calculated::Self.pkg1#ent2#att14 * Self.pkg1#ent2#att13"/>
+      <Attribute id="pkg1#ent2#att13" name="Quantita" type="integer"/>
+      <Attribute id="pkg1#ent2#att14" name="Prezzo Unitario" type="float" subType="sbt1"/>
+      <Attribute id="pkg1#ent2#att15" name="Prezzo Parziale" type="float" derivationQuery="calculated::Self.pkg1#ent2#att14 * Self.pkg1#ent2#att13" subType="sbt1"/>
       <Attribute id="pkg1#ent2#att6" name="id_prodotto" type="integer"/>
     </Entity>
   </Package>
@@ -115,4 +115,5 @@
     <RelationshipRole1 id="rel1#role1" name="CartItemToCart" maxCard="1"/>
     <RelationshipRole2 id="rel1#role2" name="CartToCartItem" maxCard="N"/>
   </Relationship>
+  <SubType id="sbt1" name="priceType" type="float"/>
 </DataModel>
