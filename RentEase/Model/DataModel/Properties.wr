@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="660" gr:y="295" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att17 User#att23 User#att7" db:database="db1" db:schema="A0971235" db:table="USER">
+  <Entity id="User" name="User" duration="persistent" gr:x="665" gr:y="295" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att17 User#att23 User#att7" db:database="db1" db:schema="A0971235" db:table="USER">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="ID" db:idGenerator="identity"/>
     <Attribute name="username" id="userName" type="string" db:column="USERNAME"/>
     <Attribute name="password" id="password" type="password" db:column="PASSWORD"/>
@@ -94,8 +94,8 @@
       <db:JoinColumn attribute="ent6#att29" name="ID"/>
     </RelationshipRole2>
   </Relationship>
-  <Package id="pkg1" name="Cart" gr:x="215" gr:y="500">
-    <Entity id="pkg1#ent1" name="Cart" duration="volatile" attributeOrder="pkg1#ent1#att3 pkg1#ent1#att4 pkg1#ent1#att16 pkg1#ent1#att18 pkg1#ent1#att25" volatileStorage="database" gr:x="0" gr:y="0">
+  <Package id="pkg1" name="Cart" gr:x="205" gr:y="615">
+    <Entity id="pkg1#ent1" name="Cart" duration="volatile" attributeOrder="pkg1#ent1#att3 pkg1#ent1#att4 pkg1#ent1#att16 pkg1#ent1#att18 pkg1#ent1#att25" volatileStorage="database" gr:x="0" gr:y="10">
       <Attribute id="pkg1#ent1#att3" name="oid" key="true" type="integer"/>
       <Attribute id="pkg1#ent1#att4" name="Prezzo totale" type="float" derivationQuery="calculated::sum(Self.rel1#role2(as Var1).pkg1#ent2#att15)" subType="sbt1"/>
       <Attribute id="pkg1#ent1#att16" name="Inizio Noleggio" type="date"/>

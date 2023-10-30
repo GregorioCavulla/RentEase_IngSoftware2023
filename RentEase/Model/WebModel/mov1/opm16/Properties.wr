@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="415" gr:y="315" id="mov1#opm16" name="Concludi Ordine">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="400" gr:y="365" id="mov1#opm16" name="Concludi Ordine">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm16#icu16" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm16#icu16#icp42" name="fineData"/>
@@ -12,21 +12,21 @@
         <LinkParameter id="mov1#opm16#icu16#oln80#par221" name="RICHIESTO_Stato" sourceValue="RICHIESTO" target="mov1#opm16#cru14.ent6#att33"/>
         <LinkParameter id="mov1#opm16#icu16#oln80#par176" name="dataOrdine_dataOrdine" source="mov1#opm16#icu16#icp5" target="mov1#opm16#cru14.ent6#att26"/>
       </OKLink>
-      <Link id="mov1#opm16#icu16#ln19" name="Flow19" to="mov1#opm16#dlu4" type="transport" validate="true" gr:bendpoints="386,-22,-484,-102;690,-21,-180,-101">
+      <Link id="mov1#opm16#icu16#ln19" name="Flow19" to="mov1#opm16#dlu4" type="transport" validate="true" gr:bendpoints="260,-34,-570,-94;690,-21,-180,-101">
         <LinkParameter id="mov1#opm16#icu16#ln19#par41" name="id_cart_RoleConditionCartToCartItem [oid]" source="mov1#opm16#icu16#icp27" target="mov1#opm16#dlu4#su39#rcond5.pkg1#ent1#att3"/>
       </Link>
-      <Link id="mov1#opm16#icu16#ln20" name="Flow20" to="mov1#opm16#dlu5" type="transport" validate="true" gr:bendpoints="268,238,-802,158;730,237,-340,157">
+      <Link id="mov1#opm16#icu16#ln20" name="Flow20" to="mov1#opm16#dlu5" type="transport" validate="true" gr:bendpoints="263,206,-747,146;688,207,-322,147">
         <LinkParameter id="mov1#opm16#icu16#ln20#par43" name="id_cart_KeyCondition8 [oid]" source="mov1#opm16#icu16#icp27" target="mov1#opm16#dlu5#su40#kcond15.pkg1#ent1#att3"/>
       </Link>
-      <Link id="mov1#opm16#icu16#ln21" name="Flow21" to="mov1#opm16#seu9" type="transport" validate="true" gr:bendpoints="243,172,-401,92;535,174,-109,94">
+      <Link id="mov1#opm16#icu16#ln21" name="Flow21" to="mov1#opm16#seu9" type="transport" validate="true" gr:bendpoints="97,153,-333,93;430,152,0,92">
         <LinkParameter id="mov1#opm16#icu16#ln21#par50" name="id_cart_RoleConditionCartToCartItem [oid]" source="mov1#opm16#icu16#icp27" target="mov1#opm16#seu9#su38#rcond4.pkg1#ent1#att3"/>
       </Link>
       <InputCollectorParameter id="mov1#opm16#icu16#icp5" name="dataOrdine"/>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="1285" gr:y="85" id="mov1#opm16#okcu14" name="OK Port14">
+    <OKCollectorUnit gr:x="1265" gr:y="85" id="mov1#opm16#okcu14" name="OK Port14">
       <OutputCollectorParameter id="mov1#opm16#okcu14#ocp28" name="success message" value="Ordine effettuato correttamente!"/>
     </OKCollectorUnit>
-    <KOCollectorUnit gr:x="1285" gr:y="190" id="mov1#opm16#kocu15" name="KO Port15">
+    <KOCollectorUnit gr:x="1265" gr:y="190" id="mov1#opm16#kocu15" name="KO Port15">
       <OutputCollectorParameter id="mov1#opm16#kocu15#ocp29" name="error message" value="Errore nella finalizzazione dell'ordine, riprova"/>
     </KOCollectorUnit>
     <CreateUnit gr:x="315" gr:y="155" id="mov1#opm16#cru14" name="Crea Ordine" entity="ent6">
@@ -40,7 +40,7 @@
         <LinkParameter id="mov1#opm16#gtu9#ln88#par51" name="UserCtxParam.oid_User.oid(OrdineToUser)" source="mov1#opm16#gtu9.UserCtxParam" target="mov1#opm16#cru14.rel4#role8.userOID"/>
       </Link>
     </GetUnit>
-    <SelectorUnit id="mov1#opm16#seu9" name="Selector All CartItems" gr:x="475" gr:y="150" entity="pkg1#ent2">
+    <SelectorUnit id="mov1#opm16#seu9" name="Selettore Elementi Carrello" gr:x="475" gr:y="150" entity="pkg1#ent2">
       <Selector id="mov1#opm16#seu9#su38" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#opm16#seu9#su38#rcond4" name="RoleConditionCartToCartItem" predicate="in" implied="false" role="rel1#role2"/>
       </Selector>
@@ -49,20 +49,20 @@
         <LinkParameter id="mov1#opm16#seu9#oln13#par39" name="quantita_quantita" source="pkg1#ent2#att13Array" target="mov1#opm16#cru3.ent9#att2"/>
       </OKLink>
     </SelectorUnit>
-    <DeleteUnit id="mov1#opm16#dlu4" name="Delete All CartItems" gr:x="935" gr:y="150" entity="pkg1#ent2">
+    <DeleteUnit id="mov1#opm16#dlu4" name="Elimina CartItems" gr:x="905" gr:y="150" entity="pkg1#ent2">
       <Selector id="mov1#opm16#dlu4#su39" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="mov1#opm16#dlu4#su39#rcond5" name="RoleConditionCartToCartItem" predicate="in" implied="false" role="rel1#role2"/>
       </Selector>
       <OKLink id="mov1#opm16#dlu4#oln14" name="OKFlow20" to="mov1#opm16#dlu5" automaticCoupling="true"/>
     </DeleteUnit>
-    <DeleteUnit id="mov1#opm16#dlu5" name="Delete All Carts" gr:x="1150" gr:y="150" entity="pkg1#ent1">
+    <DeleteUnit id="mov1#opm16#dlu5" name="Elimina Cart" gr:x="1100" gr:y="150" entity="pkg1#ent1">
       <Selector id="mov1#opm16#dlu5#su40" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm16#dlu5#su40#kcond15" name="KeyCondition8" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov1#opm16#dlu5#oln17" name="OKFlow17" to="mov1#opm16#okcu14" automaticCoupling="true"/>
       <KOLink id="mov1#opm16#dlu5#kln7" name="KOFlow7" to="mov1#opm16#kocu15" automaticCoupling="true"/>
     </DeleteUnit>
-    <CreateUnit id="mov1#opm16#cru3" name="Create OrderLines" gr:x="715" gr:y="155" bulk="true" entity="ent9">
+    <CreateUnit id="mov1#opm16#cru3" name="Create Ordine" gr:x="715" gr:y="155" bulk="true" entity="ent9">
       <OKLink id="mov1#opm16#cru3#oln15" name="OKFlow19" to="mov1#opm16#dlu4" automaticCoupling="true"/>
     </CreateUnit>
   </OperationUnits>

@@ -1,6 +1,6 @@
 <OperationGroup xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov1#opm11#opg2" name="Transaction" transaction="true" gr:x="295" gr:y="250">
   <OperationUnits>
-    <SelectorUnit id="mov1#opm11#opg2#seu3" name="Cart Selector" gr:x="0" gr:y="0" entity="pkg1#ent1">
+    <SelectorUnit id="mov1#opm11#opg2#seu3" name="Selettore Carrello" gr:x="0" gr:y="0" entity="pkg1#ent1">
       <OKLink id="mov1#opm11#opg2#seu3#oln19" name="OKFlow8" to="mov1#opm11#opg2#inn1">
         <LinkParameter id="mov1#opm11#opg2#seu3#oln19#par49" name="oid_Input" source="pkg1#ent1#att3Array" target="mov1#opm11#opg2#inn1.isnotnull"/>
       </OKLink>
@@ -11,12 +11,12 @@
         <LinkParameter id="mov1#opm11#opg2#inn1#oln20#par122" name="Input Value_Cart.oid(CartItemToCart)" source="inputValue" target="mov1#opm11#opg2#cru5.rel1#role1.pkg1#ent1#att3"/>
       </OKLink>
     </IsNotNullUnit>
-    <CreateUnit id="mov1#opm11#opg2#cru4" name="Create Cart" gr:x="170" gr:y="165" entity="pkg1#ent1">
+    <CreateUnit id="mov1#opm11#opg2#cru4" name="Crea Carrello" gr:x="170" gr:y="165" entity="pkg1#ent1">
       <OKLink id="mov1#opm11#opg2#cru4#oln21" name="OKFlow10" to="mov1#opm11#opg2#cru5">
         <LinkParameter id="mov1#opm11#opg2#cru4#oln21#par123" name="oid_Cart.oid(CartItemToCart)" source="pkg1#ent1#att3Array" target="mov1#opm11#opg2#cru5.rel1#role1.pkg1#ent1#att3"/>
       </OKLink>
     </CreateUnit>
-    <CreateUnit id="mov1#opm11#opg2#cru5" name="Create CartItem" gr:x="330" gr:y="0" entity="pkg1#ent2">
+    <CreateUnit id="mov1#opm11#opg2#cru5" name="Crea Elemento Carrello" gr:x="325" gr:y="0" entity="pkg1#ent2">
       <OKLink id="mov1#opm11#opg2#cru5#oln22" name="OKFlow11" to="mov1#opm11#okcu4" automaticCoupling="true"/>
     </CreateUnit>
   </OperationUnits>

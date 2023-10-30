@@ -14,7 +14,7 @@
         <LinkParameter id="mov1#opm13#icu13#oln44#par161" name="username_userName" source="mov1#opm13#icu13#icp36" target="mov1#opm13#mfu5.userName"/>
       </OKLink>
     </InputCollectorUnit>
-    <ModifyUnit gr:x="380" gr:y="105" id="mov1#opm13#mfu5" name="Update5" entity="User">
+    <ModifyUnit gr:x="370" gr:y="105" id="mov1#opm13#mfu5" name="Modifica Utente" entity="User">
       <Selector id="mov1#opm13#mfu5#su33" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov1#opm13#mfu5#su33#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
       </Selector>
