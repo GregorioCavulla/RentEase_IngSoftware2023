@@ -1,4 +1,4 @@
-<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="405" gr:y="260" id="mov1#opm14" name="Aggiorna Ordine">
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="410" gr:y="240" id="mov1#opm14" name="Aggiorna Ordine">
   <OperationUnits>
     <InputCollectorUnit id="mov1#opm14#icu14" gr:x="30" gr:y="60">
       <InputCollectorParameter id="mov1#opm14#icu14#icp44" name="Stato"/>

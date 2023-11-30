@@ -1,4 +1,4 @@
-<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="865" gr:y="-205" id="sv1#mpage2" name="Welcome">
+<MasterPage xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="865" gr:y="-205" id="sv1#mpage2" name="Benvenuto">
   <ContentUnits>
     <MultiMessageUnit id="sv1#mpage2#mssu9" name="Bevenuto in Rentease!" gr:x="0" gr:y="0"/>
     <EntryUnit id="sv1#mpage2#enu2" name="Login" linkOrder="sv1#mpage2#enu2#ln24 sv1#mpage2#enu2#ln61 sv1#mpage2#enu2#ln17" gr:x="15" gr:y="180" fieldOrder="sv1#mpage2#enu2#fld10 sv1#mpage2#enu2#fld3">

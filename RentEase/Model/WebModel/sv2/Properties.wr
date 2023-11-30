@@ -5,13 +5,13 @@
       <KOLink id="sv2#miu2#kln1" name="KOFlow1" to="sv2#mpage1#mssu4">
         <LinkParameter id="sv2#miu2#kln1#par12" name="Error message_Shown Messages" source="mov1#opm12#kocu5#ocp7" target="sv2#mpage1#mssu4.shownMessages"/>
       </KOLink>
-      <OKLink id="sv2#miu2#oln27" name="OKFlow26" to="sv2#area2#page9" automaticCoupling="true"/>
+      <OKLink id="sv2#miu2#oln27" name="OKFlow26" to="sv2#area2#page9" automaticCoupling="true" gr:bendpoints="107,256,102,-119"/>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="0" gr:y="1195" id="sv2#miu20" action="true" moduleId="mov1#opm14">
       <OKLink id="sv2#miu20#oln55" name="OKFlow55" to="sv2#area5#page15#mssu23" gr:bendpoints="175,-79,55,146">
         <LinkParameter id="sv2#miu20#oln55#par187" name="success message_Shown Messages" source="mov1#opm14#okcu12#ocp21" target="sv2#area5#page15#mssu23.shownMessages"/>
       </OKLink>
-      <KOLink id="sv2#miu20#kln32" name="KOFlow32" to="sv2#area5#page15#mssu23" gr:bendpoints="173,0,53,225">
+      <KOLink id="sv2#miu20#kln32" name="KOFlow32" to="sv2#area5#page15#mssu23" gr:bendpoints="169,-63,44,212">
         <LinkParameter id="sv2#miu20#kln32#par186" name="error message_Shown Messages" source="mov1#opm14#kocu13#ocp22" target="sv2#area5#page15#mssu23.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>

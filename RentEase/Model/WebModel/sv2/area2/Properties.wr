@@ -9,7 +9,7 @@
       </KOLink>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="925" gr:y="55" id="sv2#area2#miu11" action="true" name="Aggiungi Prodotto" moduleId="mov1#opm2">
-      <OKLink id="sv2#area2#miu11#oln40" name="OKFlow40" to="sv2#area2#page14#dau4">
+      <OKLink id="sv2#area2#miu11#oln40" name="OKFlow40" to="sv2#area2#page14#dau4" gr:bendpoints="66,155,21,-120">
         <LinkParameter id="sv2#area2#miu11#oln40#par103" name="Output Port Parameter10_KeyCondition16 [oid]" source="mov1#opm2#okcu6#ocp10" target="sv2#area2#page14#dau4#su24#kcond16.ent4#att19"/>
       </OKLink>
       <KOLink id="sv2#area2#miu11#kln26" name="KOFlow26" to="sv2#area2#page13#mssu18" gr:bendpoints="-104,57,96,2">

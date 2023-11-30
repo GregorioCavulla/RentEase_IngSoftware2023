@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page10" name="Cart" gr:x="480" gr:y="30">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area1#page10" name="Carrello" gr:x="480" gr:y="30">
   <ContentUnits>
-    <IndexUnit id="sv1#area1#page10#inu7" name="Prodotti nel carrello" linkOrder="sv1#area1#page10#inu7#ln45" gr:x="200" gr:y="10" entity="pkg1#ent2" displayAttributes="pkg1#ent2#att12 pkg1#ent2#att14 pkg1#ent2#att13 pkg1#ent2#att15 pkg1#ent2#att5">
+    <IndexUnit id="sv1#area1#page10#inu7" name="Prodotti nel carrello" linkOrder="sv1#area1#page10#inu7#ln45" gr:x="200" gr:y="10" entity="pkg1#ent2" displayAttributes="pkg1#ent2#att12 pkg1#ent2#att14 pkg1#ent2#att13 pkg1#ent2#att15">
       <Link id="sv1#area1#page10#inu7#ln45" name="delete" to="sv1#area1#miu14" type="normal" validate="true">
         <LinkParameter id="sv1#area1#page10#inu7#ln45#par33" name="oid_id_CartItem" source="data[].pkg1#ent2#att5" target="sv1#area1#miu14.mov1#opm7#icu1#icp1"/>
       </Link>
@@ -56,7 +56,6 @@
           <layout:Attribute attribute="pkg1#ent2#att14"/>
           <layout:Attribute attribute="pkg1#ent2#att13"/>
           <layout:Attribute attribute="pkg1#ent2#att15"/>
-          <layout:Attribute attribute="pkg1#ent2#att5"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
